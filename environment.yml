@@ -1,0 +1,21 @@
+name: env-iffley
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - pip
+
+  # Image processing
+  - pillow
+
+  # Jupyter Environment
+  - papermill
+  - autopep8
+  - jupyterlab
+  - notebook
+  - ipython
+  - jupyter_contrib_nbextensions
+  - nbclean
+  - nbresuse
