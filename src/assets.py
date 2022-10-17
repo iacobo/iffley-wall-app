@@ -175,6 +175,7 @@ ROUTES = {
     "The Tall Man Rides a Shovelhead": (2, 16, 42, "61B", "97B"),
     "The Blair Witch Project": (6, 7, 25, 49, "73B", 105),
     "The Fallen": (8, 29, 51, 105),
+    "The Witching Hour": (6, 7, 25, "73B", 105),
 }
 
 BASE_IMG = Image.open("img/iffley_wall_big.png")
