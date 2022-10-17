@@ -11,7 +11,7 @@ if __name__ == "__main__":
         "--holds", help="A list of holds to highlight.", type=int, nargs="+"
     )
     parser.add_argument(
-        "--all", help="Highlights all holds.", action=argparse.BooleanOptionalAction
+        "--all", help="Highlight all holds.", action=argparse.BooleanOptionalAction
     )
     parser.add_argument(
         "--cache", help="Cache routes.", action=argparse.BooleanOptionalAction

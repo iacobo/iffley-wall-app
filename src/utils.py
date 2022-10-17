@@ -34,9 +34,7 @@ def highlight_area(img, region, factor, outline_color=None, outline_width=1):
 
 
 def estimate_subhold(hold):
-    """Estimate the subhold of a hold based on its position relative to the
-    other holds.
-    """
+    """Estimate the subhold of a hold based on its likely relative location."""
     num, let = int(hold[:-1]), hold[-1]
     l, u, r, d = HOLDS[num]
     split = (l + r) // 2
@@ -51,8 +49,10 @@ def highlight_route(route, img=BASE_IMG):
     try:
         path = Path(f"img/routes/{route}.png")
         img = Image.open(path)
+
     except FileNotFoundError:
         n = len(ROUTES[route])
+
         for i, hold in enumerate(ROUTES[route]):
             if i == n - 1:
                 colour = "finish"
@@ -62,6 +62,7 @@ def highlight_route(route, img=BASE_IMG):
                 colour = "stand"
             else:
                 hold = (hold,)
+
             for h in hold:
                 try:
                     hold = HOLDS[h]
