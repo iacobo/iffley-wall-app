@@ -1,25 +1,29 @@
 <div align="center">
 
-## The Iffley Wall Interactive Guide
-
 ![Alt text](img/icon.png?raw=true "Icon")
+
+## The Iffley Wall Interactive Guide
 
 </div>
 
- An interactive guide to the Iffley bouldering wall.
+ An interactive guide to the Iffley bouldering wall. Click here to run the program in interactive mode:
 
- To run, first create and activate a virtual environment:
+ <div align="center">
+
+ [![Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb)
+
+ </div>
+
+### Running locally
+
+Alternatively you can run the script natively. First create and activate a virtual environment:
 
 ```python
 conda env create -f environment.yml
 conda activate env-iffley
 ```
 
-Clik here to run the program in interactive mode:
-
- [![Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb)
-
-Alternatively you can run the script natively, specifying the (named) route or holds to highlight:
+Then use one of the following commands, specifying the route or holds to highlight:
 
 Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  | Output
 --------|-------
@@ -29,8 +33,8 @@ Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  | 
 
 ### Key
 
-- 🟧 <span style="color:orange">Orange</span> holds are standing start holds
-- 🟥 <span style="color:red">Red</span> holds are general holds in the route
-- 🟦 <span style="color:blue">Blue</span> hold is final hold in the route
+- 🟧 <span style="color:orange">Orange</span>: standing start holds
+- 🟥 <span style="color:red">Red</span>: general holds in the route
+- 🟦 <span style="color:blue">Blue</span>: final hold
 
 If there are no orange holds then it is a sit start. Sit start starting holds *should be* intuitive.
