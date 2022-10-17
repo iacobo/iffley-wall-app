@@ -7,7 +7,7 @@ d = [1890, 1700, 1540]
 HOLDS = {
     "left arete": (60, 730, 65, 1895),
     "left girder": (800, 5, 1010, 170),
-    "mid girder": (3450, 5, 3650, 205),
+    "middle girder": (3450, 5, 3650, 205),
     "right girder": (6125, 5, 6300, 205),
     1: (100, u[0], 350, d[0]),
     2: (1200, u[0], 1340, d[0]),
@@ -195,6 +195,7 @@ ROUTES = {
     "Sabre Dance": ((38, 11, 34, "58A"), "85A", 115),
     "Varsity": ("left arete", 1, "40B", "41A", 93),
     "Weak Like Monkey": (9, 31, 32, 85, 113),
+    "Irn Bru": ("left arete", 1, "40A", 41, "left girder"),
     "Strong Like Bull": (10, 32, 85, 114),
     # 4: Classic Iffley
     "Overmantel": (7, 28, 51, 76, 107),
@@ -203,7 +204,12 @@ ROUTES = {
     "Chaos Theory": (7, 26, 51, 108, 105),
     "The Nose": (9, 30, 56, 81, 110),
     # 5: The Threshold Problems
+    "Analogue": (5, 20, "48A", "72B", "101A"),
+    "Digital": (8, 28, 53, "76B", "107A"),
+    "This is a Low": (8, 29, 54, "77A", 108, 105),
     "Hate Mail": (11, 38, "58B", 91, 117),
+    "The Tensor": (5, 20, 23, 49, 25, 50, "75A", 105),
+    "Deadpoint": (11, 37, 34, 35, "86C", 32, "113B"),
     # 6: Hard Iffley
     "The Tall Man Rides a Shovelhead": (2, 16, 42, "61B", "97B"),
     "Osmosis": (9, 30, 56, 10, 36, "90A", "28A", 117),
@@ -214,6 +220,11 @@ ROUTES = {
     "The Witching Hour": (6, 7, 25, "73B", 105),
     "Zebedee's Tournament": (9, 10, 32, "86B", 112, 82, 110),
     "Ecstasy": (34, 32, "83B", "29A", "88B", "53A", 108),
+    # Girdering
+    "Rainbow": (2, 16, 14, 15, 42, 41, "left girder"),
+    "The Easy Touch": (2, 16, "15A", 14, 42, "left girder"),
+    "Apollo": (24, 25, 50, "middle girder"),
+    "Aviation": ((7, 26, 51, 77), "middle girder"),
 }
 
 path = Path("img/iffley_wall_big.png")
