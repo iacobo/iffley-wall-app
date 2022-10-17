@@ -13,6 +13,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--all", help="Highlights all holds.", action=argparse.BooleanOptionalAction
     )
+    parser.add_argument(
+        "--cache", help="Cache routes.", action=argparse.BooleanOptionalAction
+    )
     args = parser.parse_args()
 
     if args.all:
@@ -22,6 +25,9 @@ if __name__ == "__main__":
     elif args.holds:
         img = utils.highlight_holds(args.holds)
 
-    # img.save("img/output.png")
-    # img.show()  # Display the result.
-    utils.cache_routes()
+    # Display the result.
+    if args.all or args.route or args.holds:
+        img.show()
+
+    if args.cache:
+        utils.cache_routes()
