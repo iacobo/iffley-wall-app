@@ -1,5 +1,5 @@
 from PIL import ImageColor, ImageDraw, ImageEnhance
-from src.assets import HOLDS, ROUTES, COLOURS
+from src.assets import HOLDS, ROUTES, COLOURS, BASE_IMG
 
 
 def highlight_area(img, region, factor, outline_color=None, outline_width=1):
@@ -32,7 +32,7 @@ def highlight_area(img, region, factor, outline_color=None, outline_width=1):
     return img
 
 
-def highlight_route(img, route):
+def highlight_route(route, img=BASE_IMG):
     n = len(ROUTES[route])
     for i, hold in enumerate(ROUTES[route]):
         if i == n - 1:
@@ -50,12 +50,15 @@ def highlight_route(img, route):
     return img
 
 
-def highlight_all(img):
-    highlight_holds(img, HOLDS.keys())
+def highlight_all(img=BASE_IMG):
+    img = highlight_holds(HOLDS.keys(), img)
+    return img
 
 
-def highlight_holds(img, holds):
+def highlight_holds(holds, img=BASE_IMG):
     for hold in holds:
-        img = highlight_area(img, HOLDS[hold], 2, outline_color="red", outline_width=6)
+        img = highlight_area(
+            img, HOLDS[hold], 1.75, outline_color="red", outline_width=6
+        )
 
     return img
