@@ -1,6 +1,5 @@
 import argparse
-from PIL import Image
-from src import utils
+from src import utils, assets
 
 if __name__ == "__main__":
 
@@ -16,14 +15,14 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    img = Image.open("img/iffley_wall.png")
-
     if args.all:
-        img = utils.highlight_all(img)
+        img = utils.highlight_all(assets.base_img)
     elif args.route:
-        img = utils.highlight_route(img, args.route)
+        img = utils.highlight_route(assets.base_img, args.route)
     elif args.holds:
-        img = utils.highlight_holds(img, args.holds)
+        img = utils.highlight_holds(assets.base_img, args.holds)
 
     img.save("img/output.png")
     # img.show()  # Display the result.
+
+    print(assets.HOLDS)
