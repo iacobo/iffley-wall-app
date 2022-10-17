@@ -30,8 +30,8 @@ Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  | 
 
 ### Key
 
-- <span style="color:orange">Orange</span> holds are standing start holds
-- <span style="color:red">Red</span> holds are general holds in the route
-- <span style="color:blue">Blue</span> hold is final hold in the route
+- 🟧 <span style="color:orange">Orange</span> holds are standing start holds
+- 🟥 <span style="color:red">Red</span> holds are general holds in the route
+- 🟦 <span style="color:blue">Blue</span> hold is final hold in the route
 
 If there are no orange holds then it is a sit start. Sit start starting holds *should be* intuitive.
