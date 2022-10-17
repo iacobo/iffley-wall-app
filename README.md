@@ -23,7 +23,7 @@ python main.py
 
 You can also pre-specify the (named) route or holds to highlight:
 
-Command | Output
+Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  | Output
 --------|-------
 `python main.py --route "The Rocker"` | ![Alt text](img/rocker.png?raw=true "The Rocker")
 `python main.py --holds 1 14 40 62` | ![Alt text](img/holds.png?raw=true "Holds")
