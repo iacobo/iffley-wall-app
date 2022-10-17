@@ -1,8 +1,6 @@
 <div align="center">
 
-## The Iffley Boulder Wall
-
-# Interactive Guide
+## The Iffley Wall Interactive Guide
 
 ![Alt text](img/icon.png?raw=true "Icon")
 
