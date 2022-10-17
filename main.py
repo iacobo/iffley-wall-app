@@ -1,5 +1,5 @@
 import argparse
-from src import utils, assets
+from src import utils
 
 if __name__ == "__main__":
 

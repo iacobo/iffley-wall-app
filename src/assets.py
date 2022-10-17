@@ -142,12 +142,29 @@ COLOURS = {
 }
 
 ROUTES = {
+    # First Steps
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
+    "Ali G": ((30, 55), 81, 110),
+    "Boing! Said Zebedee": ((34,), 85, 32, "112B"),
+    "The Right Stuff": (9, 10, 32, 34, "58A", "85A", "113B"),
     "Dynosaur": (2, 17, 16, 3, 18, 45, 63, 98),
+    "The Rocker": ((2, "15B", "44B"), 17, 64, 46, 20, 68, 69),
+    # Easy Classics
+    "Question Time": (4, 19, 20, 47, 66, 69, 101),
+    "Ice Cube": (8, 28, "29A", 54, "79A", 80, 108),
+    "Twisted Sister": (("77B", 7), 80, "29B", 30, 81, 32, 85),
     "The Bad": (2, 16, 43, 42, 44, "96A"),
     "The Jester": (2, 16, 43, 63, 96),
-    "The Rocker": ((2, "15B", "44B"), 17, 64, 46, 20, 68, 69),
-    "Question Time": (4, 19, 20, 47, 66, 69, 101),
+    "No Problem": (17, 18, "64A", "97B"),
+    # Into the Fives
+    "Sabre Dance": ((38, 11, 34, "58A"), "85A", 115),
+    "Strong Like Bull": (10, 32, 85, 114),
+    # Classic Iffley
+    "Overmantel": (7, 28, 51, 76, 107),
+    "Laah!": (11, 36, 37, 89, 117),
+    "C2": (11, 37, 10, 32, "84B", 81),
+    "Chaos Theory": (7, 26, 51, 108, 105),
+    "The Nose": (9, 30, 56, 81, 110),
 }
 
 BASE_IMG = Image.open("img/iffley_wall_big.png")

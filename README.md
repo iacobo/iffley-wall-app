@@ -15,18 +15,17 @@ conda env create -f environment.yml
 conda activate env-iffley
 ```
 
-Then run the main script for interactive mode:
+Clik here to run the program in interactive mode:
 
-```python
-python main.py
-```
+ [![Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb)
 
-You can also pre-specify the (named) route or holds to highlight:
+Alternatively you can run the script natively, specifying the (named) route or holds to highlight:
 
 Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  | Output
 --------|-------
 `python main.py --route "The Rocker"` | ![Alt text](img/rocker.png?raw=true "The Rocker")
 `python main.py --holds 1 14 40 62` | ![Alt text](img/holds.png?raw=true "Holds")
+`python main.py --all` | ![Alt text](img/all.png?raw=true "Holds")
 
 ### Key
 
