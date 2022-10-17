@@ -1,4 +1,10 @@
-# iffley-wall-app
+# Iffley Boulder Wall - Interactive Guide
+
+<center>
+
+![Alt text](img/icon.png?raw=true "Icon")
+
+</center>
 
  An interactive guide to the Iffley bouldering wall.
 
@@ -17,13 +23,15 @@ python main.py
 
 You can also pre-specify the (named) route or holds to highlight:
 
-```python
-python main.py --route "The Rocker"
-python main.py --holds 7 2 42 43 64
-```
+Command | Output
+--------|-------
+`python main.py --route "The Rocker"` | ![Alt text](img/rocker.png?raw=true "The Rocker")
+`python main.py --holds 1 14 40 62` | ![Alt text](img/holds.png?raw=true "Holds")
 
-Key:
+### Key
 
-- Orange holds are standing start holds
-- Red holds are general holds in the route (if no orange holds then it is a sit start,starting holds should be intuitive)
-- Blue hold is final hold in the route
+- <span style="color:orange">Orange</span> holds are standing start holds
+- <span style="color:red">Red</span> holds are general holds in the route
+- <span style="color:blue">Blue</span> hold is final hold in the route
+
+If there are no orange holds then it is a sit start. Sit start starting holds *should be* intuitive.
