@@ -22,5 +22,6 @@ if __name__ == "__main__":
     elif args.holds:
         img = utils.highlight_holds(args.holds)
 
-    img.save("img/output.png")
+    # img.save("img/output.png")
     # img.show()  # Display the result.
+    utils.cache_routes()
