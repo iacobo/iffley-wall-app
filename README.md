@@ -1,10 +1,12 @@
-# Iffley Boulder Wall - Interactive Guide
+<div align="center">
 
-<center>
+## The Iffley Boulder Wall
+
+# Interactive Guide
 
 ![Alt text](img/icon.png?raw=true "Icon")
 
-</center>
+</div>
 
  An interactive guide to the Iffley bouldering wall.
 
