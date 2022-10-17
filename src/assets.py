@@ -3,7 +3,7 @@ from PIL import Image
 u = [1750, 1560, 1380]
 d = [1890, 1700, 1540]
 
-HOLDS_old = {
+HOLDS = {
     "left arete": (60, 730, 65, 1895),
     "left girder": (800, 5, 1010, 170),
     # "mid girder": (60, 730, 35, 1895),
@@ -62,8 +62,6 @@ HOLDS_old = {
     # "right arete": (),
 }
 
-HOLDS = {key: tuple(int(v / 2.8128) for v in val) for key, val in HOLDS_old.items()}
-
 COLOURS = {
     "normal": "red",
     "stand": "orange",
@@ -79,4 +77,4 @@ ROUTES = {
     "Question Time": (4, 19, 20, 47, 66, 69, 101),
 }
 
-base_img = Image.open("img/iffley_wall.png")
+BASE_IMG = Image.open("img/iffley_wall_big.png")

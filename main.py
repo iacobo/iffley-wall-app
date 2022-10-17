@@ -16,13 +16,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.all:
-        img = utils.highlight_all(assets.base_img)
+        img = utils.highlight_all(assets.BASE_IMG)
     elif args.route:
-        img = utils.highlight_route(assets.base_img, args.route)
+        img = utils.highlight_route(assets.BASE_IMG, args.route)
     elif args.holds:
-        img = utils.highlight_holds(assets.base_img, args.holds)
+        img = utils.highlight_holds(assets.BASE_IMG, args.holds)
 
     img.save("img/output.png")
     # img.show()  # Display the result.
-
-    print(assets.HOLDS)
