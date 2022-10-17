@@ -178,4 +178,4 @@ ROUTES = {
     "The Witching Hour": (6, 7, 25, "73B", 105),
 }
 
-BASE_IMG = Image.open("img/iffley_wall_big.png")
+BASE_IMG = Image.open("./img/iffley_wall_big.png")
