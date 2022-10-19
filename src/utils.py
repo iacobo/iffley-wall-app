@@ -34,8 +34,14 @@ def highlight_area(
         draw.line(coords, fill=outline_color, width=outline_width)
 
         if label:
-            font = ImageFont.truetype("arial.ttf", 60)
-            draw.text((left, upper), label, font=font)
+            font = ImageFont.truetype("arial.ttf", 40)
+            draw.text(
+                ((left + right) // 2, upper),
+                label,
+                anchor="mt",
+                font=font,
+                fill="black",
+            )
 
     return img
 
