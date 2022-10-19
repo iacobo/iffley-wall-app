@@ -1,10 +1,12 @@
-from PIL import Image, ImageColor, ImageDraw, ImageEnhance
+from PIL import Image, ImageColor, ImageDraw, ImageEnhance, ImageFont
 from pathlib import Path
 from src.assets import HOLDS, ROUTES, COLOURS, BASE_IMG
 import itertools
 
 
-def highlight_area(img, region, factor, outline_color=None, outline_width=1):
+def highlight_area(
+    img, region, factor, outline_color=None, outline_width=1, label=False
+):
     """Highlight specified rectangular region of image by `factor` with an
     optional colored  boarder drawn around its edges and return the result.
     """
@@ -30,6 +32,10 @@ def highlight_area(img, region, factor, outline_color=None, outline_width=1):
             (left, upper),
         ]
         draw.line(coords, fill=outline_color, width=outline_width)
+
+        if label:
+            font = ImageFont.truetype("arial.ttf", 60)
+            draw.text((left, upper), label, font=font)
 
     return img
 
@@ -105,7 +111,12 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False):
                     hold = estimate_subhold(h)
                 # Highlight hold
                 img = highlight_area(
-                    img, hold, 2, outline_color=COLOURS[colour], outline_width=6
+                    img,
+                    hold,
+                    2,
+                    outline_color=COLOURS[colour],
+                    outline_width=6,
+                    label=str(h),
                 )
         if save:
             img.save(file_loc)
@@ -114,15 +125,22 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False):
     return img
 
 
-def highlight_all(img=BASE_IMG):
+def highlight_all(img=BASE_IMG, save=True):
     img = highlight_holds(HOLDS.keys(), img)
+    if save:
+        img.save(Path("img/all.png"))
     return img
 
 
 def highlight_holds(holds, img=BASE_IMG):
     for hold in holds:
         img = highlight_area(
-            img, HOLDS[hold], 1.75, outline_color="red", outline_width=6
+            img,
+            HOLDS[hold],
+            1.75,
+            outline_color="red",
+            outline_width=6,
+            label=str(hold),
         )
 
     return img
