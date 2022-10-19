@@ -10,7 +10,7 @@
 
 First create and activate a virtual environment:
 
-```python
+```shell
 conda env create -f environment.yml
 conda activate env-iffley
 ```
@@ -23,11 +23,9 @@ Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀| Output
 `python main.py --holds 1 14 40 62` | ![Alt text](img/holds.png?raw=true "Holds")
 `python main.py --all` | ![Alt text](img/all.png?raw=true "Holds")
 
-## Interactive mode
+### Interactive mode
 
-Alternatively run the interactive notebook. Type in the name of a route or holds and run the appropriate cell to highlight them.
-
-[![Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb)
+Alternatively you can run the interactive notebook. Type in the name of a route or holds and run the appropriate cell to highlight them: [![Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb)
 
 ### Key
 

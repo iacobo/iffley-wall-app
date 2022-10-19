@@ -48,6 +48,25 @@ def highlight_area(
     return img
 
 
+def darken_out_of_bounds(img, hold_coords, factor=0.3):
+    left = min([c[0] for c in hold_coords]) - 400
+    right = max([c[2] for c in hold_coords]) + 400
+    region_left = (0, 0, max(left, 0), img.height)
+    region_right = (min(right, img.width), 0, img.width, img.height)
+
+    img = img.copy()  # Avoid changing original image.
+
+    for region in (region_left, region_right):
+        img_crop = img.crop(region)
+
+        brightner = ImageEnhance.Brightness(img_crop)
+        img_crop = brightner.enhance(factor)
+
+        img.paste(img_crop, region)
+
+    return img
+
+
 def estimate_subhold(hold):
     """Estimate the subhold of a hold based on its likely relative location."""
     num, let = int(hold[:-1]), hold[-1]
@@ -90,44 +109,58 @@ def estimate_girder(hold):
     return girder
 
 
-def highlight_route(route, img=BASE_IMG, regenerate=False, save=False):
+def get_hold_coords(hold, i=None, route=None):
+    # Getting correct girder
+    if hold == "girder":
+        hold = estimate_girder(ROUTES[route][i - 1])
+    try:
+        coords = HOLDS[hold]
+    # Getting xA or xB etc
+    except KeyError:
+        coords = estimate_subhold(hold)
+    return coords
+
+
+def get_clean_holds(route):
+    holds = ROUTES[route]
+    n = len(ROUTES[route])
+    clean_holds = []
+
+    for i, hold in enumerate(holds):
+        if isinstance(hold, tuple):
+            clean_holds.extend((h, get_hold_coords(h, i, route), "stand") for h in hold)
+        else:
+            if i == (n - 1):
+                colour = "finish"
+            else:
+                colour = "normal"
+            clean_holds.append((hold, get_hold_coords(hold, i, route), colour))
+
+    return clean_holds
+
+
+def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=True):
     # Avoid regenerating route if already cached.
     file_loc = Path(f"img/routes/{route}.png")
 
     if regenerate or not file_loc.is_file():
-        n = len(ROUTES[route])
+        holds = get_clean_holds(route)
 
-        for i, hold in enumerate(ROUTES[route]):
-            # Colouring hold
-            if isinstance(hold, tuple):
-                colour = "stand"
-            else:
-                hold = (hold,)
-                if i == (n - 1):
-                    colour = "finish"
-                else:
-                    colour = "normal"
-
-            for h in hold:
-                # Getting correct girder
-                if h == "girder":
-                    h = estimate_girder(ROUTES[route][i - 1])
-                try:
-                    hold = HOLDS[h]
-                # Getting xA or xB etc
-                except KeyError:
-                    hold = estimate_subhold(h)
-                # Highlight hold
-                img = highlight_area(
-                    img,
-                    hold,
-                    outline_color=COLOURS[colour],
-                    label=str(h),
-                )
+        for hold, coords, colour in holds:
+            # Highlight hold
+            img = highlight_area(
+                img,
+                coords,
+                outline_color=COLOURS[colour],
+                label=str(hold),
+            )
         if save:
             img.save(file_loc)
     else:
         img = Image.open(file_loc)
+
+    if darken:
+        img = darken_out_of_bounds(img, [coord for _, coord, _ in holds])
     return img
 
 
@@ -138,7 +171,7 @@ def highlight_all(img=BASE_IMG, save=True):
     return img
 
 
-def highlight_holds(holds, img=BASE_IMG):
+def highlight_holds(holds, img=BASE_IMG, darken=True):
     for hold in holds:
         img = highlight_area(
             img,
@@ -147,15 +180,25 @@ def highlight_holds(holds, img=BASE_IMG):
             label=str(hold),
         )
 
+    if darken:
+        coords = [HOLDS[hold] for hold in holds]
+        img = darken_out_of_bounds(img, coords)
+
     return img
 
 
-def cache_routes(img=BASE_IMG, regenerate=False):
+def cache_routes(img=BASE_IMG, regenerate=False, compress=True):
     for route in ROUTES:
         file_loc = Path(f"img/routes/{route}.png")
         if regenerate or not file_loc.is_file():
             curr_img = highlight_route(route, img, regenerate=True, save=True)
-            curr_img.save(file_loc)
+            if compress:
+                curr_img = curr_img.resize(
+                    (curr_img.width // 2, curr_img.height // 2), Image.LANCZOS
+                )
+                curr_img.save(file_loc, optimize=True, quality=50)
+            else:
+                curr_img.save(file_loc)
 
 
 def list_holds():
