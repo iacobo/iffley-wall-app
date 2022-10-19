@@ -154,13 +154,14 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=Tr
                 outline_color=COLOURS[colour],
                 label=str(hold),
             )
-        if save:
-            img.save(file_loc)
     else:
         img = Image.open(file_loc)
 
     if darken:
         img = darken_out_of_bounds(img, [coord for _, coord, _ in holds])
+
+    if save:
+        img.save(file_loc)
     return img
 
 
