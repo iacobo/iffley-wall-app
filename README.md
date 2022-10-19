@@ -6,6 +6,8 @@
 
 </div>
 
+A digital guide to the Iffley Bouldering Wall in Oxford. Highlights historic routes from the Iffley Wall Guidebook, and allows users to view custom routes.
+
 ### Running locally
 
 First create and activate a virtual environment:
@@ -35,6 +37,6 @@ Alternatively you can run the interactive notebook. Type in the name of a route 
 
 ### Info
 
-- If there are no orange holds then it is a sit start.
+- If there are no yellow holds then it is a sit start.
 - Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
 - You do not need to match hands on the final hold.
