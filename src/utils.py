@@ -5,7 +5,7 @@ import itertools
 
 
 def highlight_area(
-    img, region, factor, outline_color=None, outline_width=1, label=False
+    img, region, factor=2, outline_color=None, outline_width=6, label=False
 ):
     """Highlight specified rectangular region of image by `factor` with an
     optional colored  boarder drawn around its edges and return the result.
@@ -41,6 +41,8 @@ def highlight_area(
                 anchor="mt",
                 font=font,
                 fill="black",
+                stroke_width=1,
+                stroke_fill="white",
             )
 
     return img
@@ -101,7 +103,7 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False):
                 colour = "stand"
             else:
                 hold = (hold,)
-                if i == n - 1:
+                if i == (n - 1):
                     colour = "finish"
                 else:
                     colour = "normal"
@@ -119,9 +121,7 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False):
                 img = highlight_area(
                     img,
                     hold,
-                    2,
                     outline_color=COLOURS[colour],
-                    outline_width=6,
                     label=str(h),
                 )
         if save:
@@ -143,9 +143,7 @@ def highlight_holds(holds, img=BASE_IMG):
         img = highlight_area(
             img,
             HOLDS[hold],
-            1.75,
-            outline_color="red",
-            outline_width=6,
+            outline_color=COLOURS["normal"],
             label=str(hold),
         )
 
