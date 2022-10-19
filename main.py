@@ -16,14 +16,17 @@ if __name__ == "__main__":
     parser.add_argument(
         "--cache", help="Cache routes.", action=argparse.BooleanOptionalAction
     )
+    parser.add_argument("--containing", help="List routes containing hold", type=int)
     args = parser.parse_args()
 
     if args.all:
         img = utils.highlight_all()
     elif args.route:
-        img = utils.highlight_route(args.route)
+        img = utils.highlight_route(args.route, regenerate=True, save=True)
     elif args.holds:
         img = utils.highlight_holds(args.holds)
+    elif args.containing:
+        print(utils.list_routes_containing(args.containing))
 
     # Display the result.
     if args.all or args.route or args.holds:

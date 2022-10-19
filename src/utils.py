@@ -1,6 +1,7 @@
 from PIL import Image, ImageColor, ImageDraw, ImageEnhance
 from pathlib import Path
 from src.assets import HOLDS, ROUTES, COLOURS, BASE_IMG
+import itertools
 
 
 def highlight_area(img, region, factor, outline_color=None, outline_width=1):
@@ -45,32 +46,71 @@ def estimate_subhold(hold):
     return subhold
 
 
-def highlight_route(route, img=BASE_IMG):
-    try:
-        path = Path(f"img/routes/{route}.png")
-        img = Image.open(path)
+def get_center_x(hold):
+    if not isinstance(hold, tuple):
+        hold = HOLDS[hold]
+    l, u, r, d = hold
+    return (l + r) // 2
 
-    except FileNotFoundError:
+
+def estimate_girder(hold):
+    """Estimate girder based on position of penultimate hold."""
+    if isinstance(hold, tuple):
+        hold = hold[-1]
+    if str(hold)[-1] in "ABCDE":
+        hold = estimate_subhold(hold)
+    else:
+        hold = HOLDS[hold]
+    if (
+        get_center_x(hold)
+        < (get_center_x("left girder") + get_center_x("middle girder")) // 2
+    ):
+        girder = "left girder"
+    elif (
+        get_center_x(hold)
+        < (get_center_x("middle girder") + get_center_x("right girder")) // 2
+    ):
+        girder = "middle girder"
+    else:
+        girder = "right girder"
+    return girder
+
+
+def highlight_route(route, img=BASE_IMG, regenerate=False, save=False):
+    # Avoid regenerating route if already cached.
+    file_loc = Path(f"img/routes/{route}.png")
+
+    if regenerate or not file_loc.is_file():
         n = len(ROUTES[route])
 
         for i, hold in enumerate(ROUTES[route]):
-            if i == n - 1:
-                colour = "finish"
-            else:
-                colour = "normal"
+            # Colouring hold
             if isinstance(hold, tuple):
                 colour = "stand"
             else:
                 hold = (hold,)
+                if i == n - 1:
+                    colour = "finish"
+                else:
+                    colour = "normal"
 
             for h in hold:
+                # Getting correct girder
+                if h == "girder":
+                    h = estimate_girder(ROUTES[route][i - 1])
                 try:
                     hold = HOLDS[h]
+                # Getting xA or xB etc
                 except KeyError:
                     hold = estimate_subhold(h)
+                # Highlight hold
                 img = highlight_area(
                     img, hold, 2, outline_color=COLOURS[colour], outline_width=6
                 )
+        if save:
+            img.save(file_loc)
+    else:
+        img = Image.open(file_loc)
     return img
 
 
@@ -92,5 +132,25 @@ def cache_routes(img=BASE_IMG, regenerate=False):
     for route in ROUTES:
         file_loc = Path(f"img/routes/{route}.png")
         if regenerate or not file_loc.is_file():
-            curr_img = highlight_route(route, img)
+            curr_img = highlight_route(route, img, regenerate=True, save=True)
             curr_img.save(file_loc)
+
+
+def list_holds():
+    return list(HOLDS.keys())
+
+
+def list_routes_containing(hold):
+    """Return list of routes containing `hold`."""
+    route_list = [
+        route
+        for route in ROUTES
+        if hold
+        in list(
+            itertools.chain(
+                *(i if isinstance(i, tuple) else (i,) for i in ROUTES[route])
+            )
+        )
+    ]
+
+    return route_list
