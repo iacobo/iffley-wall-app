@@ -19,7 +19,7 @@ Then use one of the following commands, specifying the route or holds to highlig
 
 Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀| Output
 --------|-------
-`python main.py --route "The Rocker"` | ![Alt text](img/routes/the%20rocker.png?raw=true "The Rocker")
+`python main.py --route "The Rocker"` | ![Alt text](img/routes/The%20Rocker.png?raw=true "The Rocker")
 `python main.py --holds 1 14 40 62` | ![Alt text](img/holds.png?raw=true "Holds")
 `python main.py --all` | ![Alt text](img/all.png?raw=true "Holds")
 
