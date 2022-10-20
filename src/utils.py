@@ -146,29 +146,32 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=Tr
     if regenerate or not file_loc.is_file():
         holds = get_clean_holds(route)
 
+        # Highlight holds
         for hold, coords, colour in holds:
-            # Highlight hold
             img = highlight_area(
                 img,
                 coords,
                 outline_color=COLOURS[colour],
                 label=str(hold),
             )
+
+        # Highlight section of wall
+        if darken:
+            img = darken_out_of_bounds(img, [coord for _, coord, _ in holds])
+
+        # Save img
+        if save:
+            img.save(file_loc)
     else:
         img = Image.open(file_loc)
 
-    if darken:
-        img = darken_out_of_bounds(img, [coord for _, coord, _ in holds])
-
-    if save:
-        img.save(file_loc)
     return img
 
 
 def highlight_all(img=BASE_IMG, save=True):
     img = highlight_holds(HOLDS.keys(), img)
     if save:
-        img.save(Path("img/all.png"))
+        img.save(Path("img/examples/all.png"))
     return img
 
 

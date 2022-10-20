@@ -4,11 +4,9 @@ from src import utils
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser("main.py")
+    parser.add_argument("--route", help="Named route on Iffley Wall", type=str)
     parser.add_argument(
-        "--route", help="A named route on Iffley Boulder Wall", type=str
-    )
-    parser.add_argument(
-        "--holds", help="A list of holds to highlight.", type=int, nargs="+"
+        "--holds", help="List of holds to highlight.", type=int, nargs="+"
     )
     parser.add_argument(
         "--all", help="Highlight all holds.", action=argparse.BooleanOptionalAction
