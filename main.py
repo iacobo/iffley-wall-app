@@ -25,6 +25,7 @@ if __name__ == "__main__":
         img = utils.highlight_route(args.route, regenerate=True, save=True)
     elif args.holds:
         img = utils.highlight_holds(args.holds)
+        # img.save("img/my_route.png")
     elif args.containing:
         routes = utils.list_routes_containing(args.containing)
         print(*routes, sep="\n")

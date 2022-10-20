@@ -49,8 +49,8 @@ def highlight_area(
 
 
 def darken_out_of_bounds(img, hold_coords, factor=0.3):
-    left = min([c[0] for c in hold_coords]) - 400
-    right = max([c[2] for c in hold_coords]) + 400
+    left = min([c[0] for c in hold_coords]) - 200
+    right = max([c[2] for c in hold_coords]) + 200
     region_left = (0, 0, max(left, 0), img.height)
     region_right = (min(right, img.width), 0, img.width, img.height)
 
