@@ -33,4 +33,4 @@ if __name__ == "__main__":
         img.show()
 
     if args.cache:
-        utils.cache_routes(regenerate=True)
+        utils.cache_routes()

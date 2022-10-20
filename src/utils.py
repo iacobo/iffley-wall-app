@@ -1,9 +1,10 @@
 from PIL import Image, ImageColor, ImageDraw, ImageEnhance, ImageFont
 from pathlib import Path
-from src.assets import HOLDS, ROUTES, COLOURS, BASE_IMG
+from src.assets import HOLDS, ALL_ROUTES as ROUTES, COLOURS, BASE_IMG
 import itertools
 
 
+# Image manipulation
 def highlight_area(
     img, region, factor=2, outline_color=None, outline_width=6, label=False
 ):
@@ -67,6 +68,14 @@ def darken_out_of_bounds(img, hold_coords, factor=0.3):
     return img
 
 
+# Hold location tools
+def get_center_x(hold):
+    if not isinstance(hold, tuple):
+        hold = HOLDS[hold]
+    l, u, r, d = hold
+    return (l + r) // 2
+
+
 def estimate_subhold(hold):
     """Estimate the subhold of a hold based on its likely relative location."""
     num, let = int(hold[:-1]), hold[-1]
@@ -79,11 +88,19 @@ def estimate_subhold(hold):
     return subhold
 
 
-def get_center_x(hold):
-    if not isinstance(hold, tuple):
+def estimate_arete(hold, img_width=3505):
+    """Estimate arete based on position of hold imn route."""
+    if isinstance(hold, tuple):
+        hold = hold[-1]
+    if str(hold)[-1] in "ABCDE":
+        hold = estimate_subhold(hold)
+    else:
         hold = HOLDS[hold]
-    l, u, r, d = hold
-    return (l + r) // 2
+    if get_center_x(hold) < img_width // 2:
+        arete = "left arete"
+    else:
+        arete = "right arete"
+    return arete
 
 
 def estimate_girder(hold):
@@ -113,6 +130,8 @@ def get_hold_coords(hold, i=None, route=None):
     # Getting correct girder
     if hold == "girder":
         hold = estimate_girder(ROUTES[route][i - 1])
+    elif hold == "arete":
+        hold = estimate_arete(ROUTES[route][i - 1])
     try:
         coords = HOLDS[hold]
     # Getting xA or xB etc
@@ -121,6 +140,7 @@ def get_hold_coords(hold, i=None, route=None):
     return coords
 
 
+# Clean up
 def get_clean_holds(route):
     holds = ROUTES[route]
     n = len(ROUTES[route])
@@ -139,6 +159,7 @@ def get_clean_holds(route):
     return clean_holds
 
 
+# High level helper funcs
 def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=True):
     # Avoid regenerating route if already cached.
     file_loc = Path(f"img/routes/{route}.png")
@@ -195,6 +216,7 @@ def cache_routes(img=BASE_IMG, regenerate=False, compress=True):
     for route in ROUTES:
         file_loc = Path(f"img/routes/{route}.png")
         if regenerate or not file_loc.is_file():
+            print(f"Generating: {route}")
             curr_img = highlight_route(route, img, regenerate=True, save=True)
             if compress:
                 curr_img = curr_img.resize(

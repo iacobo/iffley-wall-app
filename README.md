@@ -6,7 +6,7 @@
 
 </div>
 
-A digital guide to the Iffley Bouldering Wall in Oxford. Highlights historic routes from the Iffley Wall Guidebook, and allows users to view custom routes.
+A digital guide to the Iffley Bouldering Wall in Oxford. Highlights historic routes from the [Iffley Bouldering Guide](https://www.oxfordalpineclub.uk/shop.php#!/Iffley-10-The-Iffley-Bouldering-Guide/p/59136024/category=10367386) ([pdf](img/Iffley%20Bouldering%20Guide.pdf?raw=true)), and allows users to create and view custom routes.
 
 ### Running locally
 

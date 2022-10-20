@@ -1,5 +1,6 @@
 from PIL import Image
 from pathlib import Path
+from src.route_list import ROUTES, archived_routes
 
 
 path = Path("img/iffley_wall_big.png")
@@ -13,6 +14,7 @@ COLOURS = {
 
 HOLDS = {
     "left arete": (60, 730, 65, 1895),
+    "right arete": (7006, 730, 7200, 1895),
     "left girder": (800, 5, 1010, 170),
     "middle girder": (3450, 5, 3650, 205),
     "right girder": (6125, 5, 6300, 205),
@@ -157,84 +159,6 @@ HOLDS = {
     115: (6115, 200, 6245, 355),
     116: (6360, 200, 6495, 355),
     117: (6545, 60, 6800, 190),
-    "right arete": (7006, 730, 7200, 1895),
 }
 
-ROUTES = {
-    # 1: First Steps
-    "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
-    "Ali G": ((30, 55), 81, 110),
-    "Boing! Said Zebedee": ((34,), 85, 32, "112B"),
-    "The Right Stuff": (9, 10, 32, 34, "58A", "85A", "113B"),
-    "Dynosaur": (2, 17, 16, 3, 18, 45, 63, 98),
-    "The Rocker": ((2, "15B", "44B"), 17, 64, 46, 20, 68, 69),
-    # 2: Easy Classics
-    "Question Time": (4, 19, 20, 47, 66, 69, 101),
-    "Ice Cube": (8, 28, "29A", 54, "79A", 80, 108),
-    "Twisted Sister": (("77B", 7), 80, "29B", 30, 81, 32, 85),
-    "The Bad": (2, 16, 43, 42, 44, "96A"),
-    "The Jester": (2, 16, 43, 63, 96),
-    "No Problem": (17, 18, "64A", "97B"),
-    # 3: Into the Fives
-    "Sabre Dance": ((38, 11, 34, "58A"), "85A", 115),
-    "Varsity": ("left arete", 1, "40B", "41A", 93),
-    "Weak Like Monkey": (9, 31, 32, 85, 113),
-    "Irn Bru": ("left arete", 1, "40A", 41, "girder"),
-    "Strong Like Bull": (10, 32, 85, 114),
-    # 4: Classic Iffley
-    "The Pint Glass": (4, "19B", 66, "47B", "102B", "99B"),
-    "Superman in Y-Fronts": ((7, 77), 51, "75A", "76B", "107A"),
-    "Gaston": ((4, 5, "47A"), "48A", 50, 6, 26, 51, "77B"),
-    "Overmantel": (7, 28, 51, 76, 107),
-    "Laah!": (11, 36, 37, 89, 117),
-    "Monocle": (7, 26, 51, "76B", "107A"),
-    "Stage Left": (17, 18, 46, "99A"),
-    "Wet Paint": (9, 30, 32, "82A", 54, 81, 110),
-    "Geronimo!": (31, 32, "84B", "girder"),
-    "Gormenghast": (10, 32, "57A", 83, "113B"),
-    "My Name is Neo": (10, 35, "84A", "85B", 115),
-    "Green Goddess": (7, 28, "79A", "107A"),
-    "Jenga": (7, 26, "77A", 108, "106B", 105),
-    "The Sorcerer's Apprentice": ((7, 24, 51), "73B", 23, 22, 105),
-    "Hebrews 5.10": (2, 16, 17, "64A", 46, "99B"),
-    "Kiss The Wall": (2, 16, "44A", 17, "62A", 96, "99A"),
-    "Crushed Strawberry": (4, "19B", 66, "47B", 67, 103),
-    "Shelve It": ((46,), "99A"),
-    "C2": (11, 37, 10, 32, "84B", 81),
-    "Chaos Theory": (7, 26, 51, 108, 105),
-    "The Beards of Zeus": (4, 5, 20, 22, "48B", "67B", "72A", "103B"),
-    "Ape Index": (4, 19, 20, "47B", "67A", "72A", "103B"),
-    "Judean People's Front Crack Suicide Squad": (29, 30, 8, "9A", "82A", 76, 56, 105),
-    "Naked": (17, 18, 63, "97A"),
-    "Enigma": (3, 18, 45, "44B", 98),
-    "The Nose": (9, 30, 56, 81, 110),
-    "The Matrix": (4, 20, "48A", "73B", 52, 105),
-    "Masters of Stone": (7, 26, 51, "73B", "107A"),
-    "PARC Analysis": ("left arete", 1, "14B", 42, "62A", 98),
-    "High Tension": (5, 20, 47, 66, "99B"),
-    "Ambiguity": (2, 16, 43, "14B", "41A", "left arete", "40A", "94B"),
-    # 5: The Threshold Problems
-    "Analogue": (5, 20, "48A", "72B", "101A"),
-    "Digital": (8, 28, 53, "76B", "107A"),
-    "This is a Low": (8, 29, 54, "77A", 108, 105),
-    "Hate Mail": (11, 38, "58B", 91, 117),
-    "The Tensor": (5, 20, 23, 49, 25, 50, "75A", 105),
-    "Deadpoint": (11, 37, 34, 35, "86C", 32, "113B"),
-    # 6: Hard Iffley
-    "The Tall Man Rides a Shovelhead": (2, 16, 42, "61B", "97B"),
-    "Osmosis": (9, 30, 56, 10, 36, "90A", "28A", 117),
-    "Moby Dick": (7, 28, "75A", "73B", "48B", "103B"),
-    "The Blair Witch Project": (6, 7, 25, 49, "73B", 105),
-    "The Four Minute Mile": (7, 26, 51, "73B", "48A", 66, 46, "64A", "96B"),
-    "The Fallen": (8, 29, 51, 105),
-    "The Witching Hour": (6, 7, 25, "73B", 105),
-    "Zebedee's Tournament": (9, 10, 32, "86B", 112, 82, 110),
-    "Palm Beach": (6, 23, 22, "70B", "73A", 51, "78B", 28, 30, 83, 57, 85),
-    "Ecstasy": (34, 32, "83B", "29A", "88B", "53A", 108),
-    # Girdering
-    "Rainbow": (2, 16, 14, 15, 42, 41, "girder"),
-    "The Easy Touch": (2, 16, "15A", 14, 42, "girder"),
-    "Dyno 8": ((48,), "girder"),
-    "Apollo": (24, 25, 50, "girder"),
-    "Aviation": ((7, 26, 51, 77), "girder"),
-}
+ALL_ROUTES = archived_routes | ROUTES
