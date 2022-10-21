@@ -559,3 +559,86 @@ web_routes = {
         "107A",
     ),  # (no chips)
 }
+
+web_routes_new = {
+    "The Big C": (31, 32, "83B", "112A"),
+    "Timmy the Tapeworm": (7, 28, "75B", "107A"),
+    "Wall Separation": (2, 16, 42, 13, 39, 12, "95C"),
+    "Obscenity": (5, 20, "70B", "73B", "girder"),
+    "Curdled Custard": (2, 16, 43, "girder"),
+    "Finger Locking Good": ("4B", 20, "48A", "102A", "104A"),
+    "Nicks Window": ("4B", "19B", 46, "48A", "73B", "girder"),
+    "Nosey": (11, "38C", "58A", 34, "86B", 56, 30, 81, 110),
+    "The Matrix Reloaded": (4, 20, "48A", "73B", 105),
+    "The Mutant": (11, 37, 92, 117),
+    "Shopping List": (3, 17, "19B", 45, "67A", "47B", "100A", 72, 50, "74A", 105),
+    "Use Your Illusion": (10, 32, 55, 29, "79A", 108),
+    "Squetch": (7, 28, 25, 52, 108, 105),
+    "King Heroin": (
+        (
+            4,
+            46,
+        ),
+        48,
+        50,
+        6,
+        7,
+        77,
+    ),  # (No chips)
+    "serving suggestion": ((5, 47), 20, "67B", "99B"),
+    "Osmosis": (9, 30, 56, 10, 36, "90A", "38A", 117),
+    "The Taliban Project": (8, 29, "88B", 32, "84A", 31, 36, "91B", "91B"),
+    "Anonymous": (31, 32, 84, "88B", "112A"),
+    "November Rain": (2, 16, 42, 98),
+    "Dwarf Diminisher": (31, 32, 81, 110),
+    "The Psychic Psquirrel": (
+        8,
+        29,
+        "53B",
+        "82A",
+        "109C",
+        55,
+        "112A",
+    ),  # "82A"(top right), 55(slope only), (no chips)
+    "Rum Doodle": (
+        10,
+        33,
+        11,
+        38,
+        89,
+        "arete",
+        117,
+    ),  # big chip, 89(top of), (no (other) chips)
+    "not another Geoff problem": ("girder", 105),  # sit start. use chips
+    "Bedraggled": (2, 16, 46, 64, 96),
+    "Superdirect": (2, 16, 96),
+    "Fond Memories": (("arete", 42), 43, 40, 44, 64, 63, 46),  # Match 46 to finish.
+    "Sweetness Personified": (
+        7,
+        26,
+        "78B",
+        8,
+        "82A",
+        30,
+        31,
+        "84A",
+        "113A",
+        55,
+        110,
+    ),  # "82A" (top right), 55 (slope)
+    "Microraptor": (4, 19, 45, 17, "44B", 98),
+    "Sorrow": ((51, "77B"), "76A", 107),  # (Chips for feet to start)
+    "Of Ruine and Some Blazing Starre": (
+        28,
+        "29A",
+        "53C",
+        80,
+        "109B",
+        "107A",
+        52,
+        105,
+    ),  # (chips for feet to start)
+    "And You and I": (5, 20, 47, 46, 17, 98, "99A"),  # 46 (hands only), (no chips)
+    "No Name Submitted": (2, 16, 43, "14B", "41A", "arete", "40A", "94B"),
+    "Waggledance": ("4B", 20, 68, "22A", 65, 45, 98, 62),  # (Feet only on 45)
+}
