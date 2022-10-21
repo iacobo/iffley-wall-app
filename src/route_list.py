@@ -6,7 +6,7 @@ ROUTES = {
     # 1: First Steps
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
     "Ali G": ((30, 55), 81, 110),
-    "Boing! Said Zebedee": ((34,), 85, 32, "112B"),
+    "'Boing!' Said Zebedee": ((34,), 85, 32, "112B"),
     "The Right Stuff": (9, 10, 32, 34, "58A", "85A", "113B"),
     "Dynosaur": (2, 17, 16, 3, 18, 45, 63, 98),
     "The Rocker": ((2, "15B", "44B"), 17, 64, 46, 20, 68, 69),
@@ -87,7 +87,7 @@ archived_routes = {
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
     "Hatless": (9, 10, 30, 32, 33, 56, "57A", "85A", "113B"),
     "Captain Nemo": (4, 19, 20, 47, 66, 69, "100A"),
-    "Boing! Said Zebedee": ((34,), 85, 32, "112B"),
+    "'Boing!' Said Zebedee": ((34,), 85, 32, "112B"),
     "Ali G": ((30, 55), 81, 110),
     "Mean Feet": (("15A", 1, 14), 42, 16, 43, "96B"),
     "Buzz, Buzz goes the Honey Bee": ((8, "53C"), "82A", 80, 30, 32, 81, "113C"),
@@ -345,7 +345,7 @@ archived_routes = {
     "New Beginnings": (8, "9A", "29A", 30, "82B", 108),
     "Problem 0": (("48A", 5, 6), "22A", 25, 26, 52, 108, 105),
     "Grandes Jorasses": ((40, 42, 13), "15A", "60A", 94),
-    "Weg!' said Zebedee": ("9B", 32, 34, "86B", "112B"),
+    "'Weg!' said Zebedee": ("9B", 32, 34, "86B", "112B"),
     "Crimptastic": ((8, "53B", "82A"), "29A", "109C"),  # "82A"(top,right)
     "Let's Twist Again": ((66, "4B", "48A"), 20, "23A", "73B", 52, 105),
     "Don't even think of it": (11, 37, 10, "86B", "85A", "57B", "114A"),

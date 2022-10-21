@@ -5,8 +5,8 @@ import itertools
 
 
 def clean_file_name(name):
+    """Remove special characters from file name."""
     name = name.lower()
-    name = name.replace(" ", "_")
     name = "".join(ch for ch in name if ch.isalnum())
     return name
 
