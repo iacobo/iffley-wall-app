@@ -534,7 +534,7 @@ archived_routes = {
     ),  # "41A" (undercut only)
     "The Last Witch": (6, 7, 25, "77A", "106B", 105),
     "Horny Little Devil": (5, 22, "48B", "72A", "103B"),  # (no chips)
-    "Bad Karma": (9, 32, 55, "79A", 8, 24, 52, "73B", 105),  # 55(slope)
+    "Bad Karma": (9, 32, 55, "79A", 8, 24, 52, "73B", 105),  # 55 (slope)
     "Ice Lolly": (6, "23A", 50, "78A", 29, 81),
     "Nailbiter": (9, 30, "84A", "53B", "88A", 108, 105),
     "Juicy Lucy": (6, "23A", 50, "75A", 28, "107A"),
