@@ -21,7 +21,7 @@ Then use one of the following commands, specifying the route or holds to highlig
 
 Command⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀| Output
 --------|-------
-`python main.py --route "This is a Low"` | ![Alt text](img/routes/This%20is%20a%20Low.png?raw=true "This is a Low")
+`python main.py --route "This is a Low"` | ![Alt text](img/routes/thisisalow.png?raw=true "This is a Low")
 `python main.py --holds 2 14 42 44 96` | ![Alt text](img/examples/holds.png?raw=true "Holds")
 `python main.py --all` | ![Alt text](img/examples/all.png?raw=true "Holds")
 
