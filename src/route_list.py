@@ -1,7 +1,3 @@
-# Routes scraped from:
-# https://users.ox.ac.uk/cgi-bin/safeperl/climbing/iffley.pl?function=routelist
-# Use REGEX to get into desired dict format
-
 ROUTES = {
     # 1: First Steps
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
@@ -82,6 +78,9 @@ ROUTES = {
 }
 
 
+# Routes scraped from:
+# https://users.ox.ac.uk/cgi-bin/safeperl/climbing/iffley.pl?function=routelist
+# Use REGEX to get into desired dict format
 archived_routes = {
     "Jug-o-Rama": ((34, "58A"), 85, 35, 115, 114),
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
