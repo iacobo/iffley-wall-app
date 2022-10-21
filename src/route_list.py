@@ -1,4 +1,6 @@
-ROUTES = {
+# Routes manually added/OCR scanned from
+# /img/Iffley%20Bouldering%20Guidebook.pdf
+iffley_10_routes = {
     # 1: First Steps
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
     "Ali G": ((30, 55), 81, 110),
@@ -81,7 +83,7 @@ ROUTES = {
 # Routes scraped from:
 # https://users.ox.ac.uk/cgi-bin/safeperl/climbing/iffley.pl?function=routelist
 # Use REGEX to get into desired dict format
-archived_routes = {
+web_routes = {
     "Jug-o-Rama": ((34, "58A"), 85, 35, 115, 114),
     "The Ladder": (2, 17, 16, 18, 43, 44, 63, 64, 98),
     "Hatless": (9, 10, 30, 32, 33, 56, "57A", "85A", "113B"),

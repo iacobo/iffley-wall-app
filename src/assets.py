@@ -1,10 +1,12 @@
 from PIL import Image
 from pathlib import Path
-from src.route_list import ROUTES, archived_routes
+from src.route_list import iffley_10_routes, web_routes
 
 
-path = Path("img/iffley_wall_big.png")
-BASE_IMG = Image.open(path)
+ALL_ROUTES = web_routes | iffley_10_routes
+
+img_loc = Path("img/iffley_wall_big.png")
+BASE_IMG = Image.open(img_loc)
 
 COLOURS = {
     "normal": "lime",
@@ -160,5 +162,3 @@ HOLDS = {
     116: (6360, 200, 6495, 355),
     117: (6545, 60, 6800, 190),
 }
-
-ALL_ROUTES = archived_routes | ROUTES
