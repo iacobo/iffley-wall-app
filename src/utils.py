@@ -242,13 +242,14 @@ def list_routes_containing(hold):
     """Return list of routes containing `hold`."""
     route_list = [
         route
-        for route in ROUTES
+        for route, holds in ROUTES.items()
         if hold
-        in list(
-            itertools.chain(
-                *(i if isinstance(i, tuple) else (i,) for i in ROUTES[route])
-            )
-        )
+        in list(itertools.chain(*(i if isinstance(i, tuple) else (i,) for i in holds)))
     ]
 
+    return route_list
+
+
+def list_stand_starts():
+    route_list = [route for route in ROUTES if isinstance(ROUTES[route][0], tuple)]
     return route_list
