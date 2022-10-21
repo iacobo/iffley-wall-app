@@ -4,6 +4,13 @@ from src.assets import HOLDS, ALL_ROUTES as ROUTES, COLOURS, BASE_IMG
 import itertools
 
 
+def clean_file_name(name):
+    name = name.lower()
+    name = name.replace(" ", "_")
+    name = "".join(ch for ch in name if ch.isalnum())
+    return name
+
+
 # Image manipulation
 def highlight_area(
     img, region, factor=2, outline_color=None, outline_width=6, label=False
@@ -162,7 +169,7 @@ def get_clean_holds(route):
 # High level helper funcs
 def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=True):
     # Avoid regenerating route if already cached.
-    file_loc = Path(f"img/routes/{route}.png")
+    file_loc = Path(f"img/routes/{clean_file_name(route)}.png")
 
     if regenerate or not file_loc.is_file():
         holds = get_clean_holds(route)
@@ -214,7 +221,7 @@ def highlight_holds(holds, img=BASE_IMG, darken=True):
 
 def cache_routes(img=BASE_IMG, regenerate=False, compress=True):
     for route in ROUTES:
-        file_loc = Path(f"img/routes/{route}.png")
+        file_loc = Path(f"img/routes/{clean_file_name(route)}.png")
         if regenerate or not file_loc.is_file():
             print(f"Generating: {route}")
             curr_img = highlight_route(route, img, regenerate=True, save=True)
