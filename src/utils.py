@@ -138,7 +138,7 @@ def get_hold_coords(hold, i=None, route=None):
     if hold == "girder":
         hold = estimate_girder(ROUTES[route][i - 1])
     elif hold == "arete":
-        hold = estimate_arete(ROUTES[route][i - 1])
+        hold = estimate_arete(ROUTES[route][i + 1])
     try:
         coords = HOLDS[hold]
     # Getting xA or xB etc

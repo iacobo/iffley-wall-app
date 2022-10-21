@@ -252,7 +252,7 @@ web_routes = {
     "From 99 'till...": ("4B", "47A", "48A", 20, "73B", 68, "102A", "100A"),
     "End Wall Endeavor": (11, 36, 37, "58A", "91B", "38B", 117),
     "Beshelved": (2, 16, 46, "99A"),
-    "Sand Script or Sanskrit": ("arete", 1, 14, 42, 17, 64, 46, "99B"),
+    "Sand Script / Sanskrit": ("arete", 1, 14, 42, 17, 64, 46, "99B"),
     "Pissing in the Wind": ((5, "48A"), "22A", "72B", "101B"),
     "Wet Paint": (9, 30, 32, "82A", 54, 81, 110),
     "Klingon": ((1, "14A", "40B", 39), "41A", "94A"),
