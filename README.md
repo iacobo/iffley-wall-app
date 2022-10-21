@@ -11,7 +11,7 @@
 A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for routes from the [Iffley Bouldering Guide](https://www.oxfordalpineclub.uk/shop.php#!/Iffley-10-The-Iffley-Bouldering-Guide/p/59136024/category=10367386), and allows users to create and view custom routes.
 
 - You can browse route topos [here](img/routes/)
-- The original guide is available as a pdf [here](img/Iffley%20Bouldering%20Guide.pdf?raw=true)
+- The original guide is available as a pdf [here](img/Iffley%20Bouldering%20Guidebook.pdf?raw=true)
 
 ### Running locally
 
