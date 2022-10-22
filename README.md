@@ -1,6 +1,6 @@
 <div align="center">
 
-![Alt text](.assets/img/icon.svg?raw=true "Icon")
+<img src=".assets/img/icon.svg" width="100">
 
 ## Digital Iffley Wall Guide
 
