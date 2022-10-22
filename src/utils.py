@@ -169,7 +169,7 @@ def get_clean_holds(route):
 # High level helper funcs
 def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=True):
     # Avoid regenerating route if already cached.
-    file_loc = Path(f"img/routes/{clean_file_name(route)}.png")
+    file_loc = Path(f"routes/{clean_file_name(route)}.png")
 
     if regenerate or not file_loc.is_file():
         holds = get_clean_holds(route)
@@ -199,7 +199,7 @@ def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=Tr
 def highlight_all(img=BASE_IMG, save=True):
     img = highlight_holds(HOLDS.keys(), img)
     if save:
-        img.save(Path("img/examples/all.png"))
+        img.save(Path(".assets/img/examples/all.png"))
     return img
 
 
@@ -221,7 +221,7 @@ def highlight_holds(holds, img=BASE_IMG, darken=True):
 
 def cache_routes(img=BASE_IMG, regenerate=False, compress=True):
     for route in ROUTES:
-        file_loc = Path(f"img/routes/{clean_file_name(route)}.png")
+        file_loc = Path(f"routes/{clean_file_name(route)}.png")
         if regenerate or not file_loc.is_file():
             print(f"Generating: {route}")
             curr_img = highlight_route(route, img, regenerate=True, save=True)

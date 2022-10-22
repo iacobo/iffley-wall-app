@@ -1,11 +1,11 @@
 from PIL import Image
 from pathlib import Path
-from src.route_list import iffley_10_routes, web_routes
+from src.routes import iffley_10_routes, web_routes
 
 
 ALL_ROUTES = web_routes | iffley_10_routes
 
-img_loc = Path("img/iffley_wall_big.png")
+img_loc = Path(".assets/img/iffley_wall_big.png")
 BASE_IMG = Image.open(img_loc)
 
 COLOURS = {
