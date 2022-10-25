@@ -18,10 +18,6 @@ A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for rout
 
 </div>
 
----
-
-## 🚀 Quickstart
-
 ### Interactive mode
 
 Type in the name of a route or holds and run the appropriate cell to highlight them [here](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb).

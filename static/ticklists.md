@@ -1,9 +1,10 @@
 <div align="center">
 
+[Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md)
+
 <img src="../.assets/img/icon.svg" width="100">
 
 ## Iffley Tick Lists
-
 
 </div>
 
@@ -12,9 +13,6 @@
 - 🟨 <span style="color:yellow">Yellow</span>: standing start holds
 - 🟩 <span style="color:lime">Green</span>: general holds in the route
 - 🟥 <span style="color:red">Red</span>: final hold
-
-
-
 
 ### Index
 
@@ -25,6 +23,7 @@
 - [5: The Threshold Problems](#5-the-threshold-problems)
 - [6: Hard Iffley](#6-hard-iffley)
 - [Girdering](#girdering)
+
 ### 1: First Steps
 
 | Name                  | Topo                                                                          |
@@ -35,6 +34,7 @@
 | The Right Stuff       | ![The Right Stuff](../.assets/img/routes/therightstuff.png?raw=true)          |
 | Dynosaur              | ![Dynosaur](../.assets/img/routes/dynosaur.png?raw=true)                      |
 | The Rocker            | ![The Rocker](../.assets/img/routes/therocker.png?raw=true)                   |
+
 ### 2: Easy Classics
 
 | Name            | Topo                                                                |
@@ -51,6 +51,7 @@
 | The Slide       | ![The Slide](../.assets/img/routes/theslide.png?raw=true)           |
 | Wax on, Wax off | ![Wax on, Wax off](../.assets/img/routes/waxonwaxoff.png?raw=true)  |
 | Stroll          | ![Stroll](../.assets/img/routes/stroll.png?raw=true)                |
+
 ### 3: Into the Fives
 
 | Name             | Topo                                                                   |
@@ -67,6 +68,7 @@
 | Irn Bru          | ![Irn Bru](../.assets/img/routes/irnbru.png?raw=true)                  |
 | Strong Like Bull | ![Strong Like Bull](../.assets/img/routes/stronglikebull.png?raw=true) |
 | Central Pillar   | ![Central Pillar](../.assets/img/routes/centralpillar.png?raw=true)    |
+
 ### 4: Classic Iffley
 
 | Name                                      | Topo                                                                                                                 |
@@ -102,6 +104,7 @@
 | PARC Analysis                             | ![PARC Analysis](../.assets/img/routes/parcanalysis.png?raw=true)                                                    |
 | High Tension                              | ![High Tension](../.assets/img/routes/hightension.png?raw=true)                                                      |
 | Ambiguity                                 | ![Ambiguity](../.assets/img/routes/ambiguity.png?raw=true)                                                           |
+
 ### 5: The Threshold Problems
 
 | Name                          | Topo                                                                                           |
@@ -115,6 +118,7 @@
 | The Tensor                    | ![The Tensor](../.assets/img/routes/thetensor.png?raw=true)                                    |
 | Deadpoint                     | ![Deadpoint](../.assets/img/routes/deadpoint.png?raw=true)                                     |
 | Dance of the Electric Penguin | ![Dance of the Electric Penguin](../.assets/img/routes/danceoftheelectricpenguin.png?raw=true) |
+
 ### 6: Hard Iffley
 
 | Name                            | Topo                                                                                              |
@@ -133,6 +137,7 @@
 | Palm Beach                      | ![Palm Beach](../.assets/img/routes/palmbeach.png?raw=true)                                       |
 | Bemused                         | ![Bemused](../.assets/img/routes/bemused.png?raw=true)                                            |
 | Ecstasy                         | ![Ecstasy](../.assets/img/routes/ecstasy.png?raw=true)                                            |
+
 ### Girdering
 
 | Name           | Topo                                                               |

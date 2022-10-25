@@ -9,6 +9,8 @@ import itertools
 def generate_header(title, key=True, info=False):
     newline = "\n"
     header = f"""<div align="center">
+    
+[Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md)
 
 <img src="../.assets/img/icon.svg" width="100">
 
@@ -284,7 +286,7 @@ def list_stand_starts():
 def create_topos_df():
     route_names = list(ROUTES.keys())
     img_locs = [
-        f"![{route}](.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
+        f"![{route}](../.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
         for route in route_names
     ]
     df = pd.DataFrame(zip(route_names, img_locs), columns=["Name", "Topo"])
