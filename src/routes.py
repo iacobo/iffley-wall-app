@@ -99,6 +99,16 @@ iffley_10_routes = {
     "Aviation": ((7, 26, 51, 77), "girder"),
 }
 
+iffley_tick_lists = {
+    "1: First Steps": list(iffley_10_routes.keys())[:6],
+    "2: Easy Classics": list(iffley_10_routes.keys())[6:18],
+    "3: Into the Fives": list(iffley_10_routes.keys())[18:30],
+    "4: Classic Iffley": list(iffley_10_routes.keys())[30:61],
+    "5: The Threshold Problems": list(iffley_10_routes.keys())[61:70],
+    "6: Hard Iffley": list(iffley_10_routes.keys())[70:84],
+    "Girdering": list(iffley_10_routes.keys())[84:],
+}
+
 
 # Routes scraped from:
 # https://users.ox.ac.uk/cgi-bin/safeperl/climbing/iffley.pl?function=routelist

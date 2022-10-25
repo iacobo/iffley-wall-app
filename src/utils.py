@@ -1,8 +1,34 @@
 from PIL import Image, ImageColor, ImageDraw, ImageEnhance, ImageFont
 from pathlib import Path
 from src.assets import HOLDS, ALL_ROUTES as ROUTES, COLOURS, BASE_IMG
+from src.routes import iffley_tick_lists
 import pandas as pd
 import itertools
+
+MD_PREFIX = """<div align="center">
+
+<img src="../.assets/img/icon.svg" width="100">
+
+## Digital Iffley Wall Guide
+
+
+</div>
+
+### Key
+
+- 🟨 <span style="color:yellow">Yellow</span>: standing start holds
+- 🟩 <span style="color:lime">Green</span>: general holds in the route
+- 🟥 <span style="color:red">Red</span>: final hold
+
+### Info
+
+- If there are no yellow holds then it is a sit start.
+- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
+- You do not need to match hands on the final hold.
+
+### Topos
+
+"""
 
 
 def clean_file_name(name):
@@ -170,7 +196,7 @@ def get_clean_holds(route):
 # High level helper funcs
 def highlight_route(route, img=BASE_IMG, regenerate=False, save=False, darken=True):
     # Avoid regenerating route if already cached.
-    file_loc = Path(f"routes/{clean_file_name(route)}.png")
+    file_loc = Path(f".assets/img/routes/{clean_file_name(route)}.png")
 
     if regenerate or not file_loc.is_file():
         holds = get_clean_holds(route)
@@ -222,7 +248,7 @@ def highlight_holds(holds, img=BASE_IMG, darken=True):
 
 def cache_routes(img=BASE_IMG, regenerate=False, compress=True):
     for route in ROUTES:
-        file_loc = Path(f"routes/{clean_file_name(route)}.png")
+        file_loc = Path(f".assets/img/routes/{clean_file_name(route)}.png")
         if regenerate or not file_loc.is_file():
             print(f"Generating: {route}")
             curr_img = highlight_route(route, img, regenerate=True, save=True)
@@ -259,7 +285,7 @@ def list_stand_starts():
 def create_topos_df():
     route_names = list(ROUTES.keys())
     img_locs = [
-        f"![{route}](routes/{clean_file_name(route)}.png?raw=true)"
+        f"![{route}](.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
         for route in route_names
     ]
     df = pd.DataFrame(zip(route_names, img_locs), columns=["Name", "Topo"])
@@ -269,33 +295,27 @@ def create_topos_df():
 def create_topos_md():
     df = create_topos_df()
     md = df.to_markdown(index=False)
-    prefix = """<div align="center">
+    md = MD_PREFIX + md
 
-<img src=".assets/img/icon.svg" width="100">
+    with open("static/topos.md", "w", encoding="utf-8") as f:
+        f.write(md)
 
-## Digital Iffley Wall Guide
 
+def create_ticklists_md():
+    md = MD_PREFIX
+    for circuit, routes in iffley_tick_lists.items():
+        img_locs = [
+            f"![{route}](../.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
+            for route in routes
+        ]
+        df = pd.DataFrame(zip(routes, img_locs), columns=["Name", "Topo"])
+        md = (
+            md
+            + f"""### {circuit}
 
-</div>
-
-### Key
-
-- 🟨 <span style="color:yellow">Yellow</span>: standing start holds
-- 🟩 <span style="color:lime">Green</span>: general holds in the route
-- 🟥 <span style="color:red">Red</span>: final hold
-
-### Topos
-
+{df.to_markdown(index=False)}
 """
-    suffix = """
+        )
 
-### Info
-
-- If there are no yellow holds then it is a sit start.
-- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
-- You do not need to match hands on the final hold.
-"""
-    md = prefix + md + suffix
-
-    with open("topos.md", "w", encoding="utf-8") as f:
+    with open("static/ticklists.md", "w", encoding="utf-8") as f:
         f.write(md)

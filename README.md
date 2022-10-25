@@ -8,10 +8,19 @@
 
 </div>
 
-A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for routes from the [Iffley Bouldering Guide](https://www.oxfordalpineclub.uk/shop.php#!/Iffley-10-The-Iffley-Bouldering-Guide/p/59136024/category=10367386), and allows users to create and view custom routes.
+A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for routes from the [Iffley Bouldering Guide](https://www.oxfordalpineclub.uk/shop.php#!/Iffley-10-The-Iffley-Bouldering-Guide/p/59136024/category=10367386) ([pdf](.assets/Iffley%20Bouldering%20Guidebook.pdf?raw=true)), and allows users to create and view custom routes.
 
-- You can browse route topos [here](topos.md)
-- The original guide is available as a pdf [here](.assets/Iffley%20Bouldering%20Guidebook.pdf?raw=true)
+---
+
+<div align="center">
+
+## 🪨 [All routes](static/topos.md)
+
+## 🪨 [Tick Lists](static/ticklists.md)
+
+</div>
+
+---
 
 ### Running locally
 
@@ -27,7 +36,7 @@ Then use one of the following commands, specifying the route or holds to highlig
 ⠀⠀⠀⠀⠀Command⠀⠀⠀⠀⠀| Output
 :--------:|:-------:
 `python main.py --holds 2 14 42 44 96` | ![Alt text](.assets/img/examples/holds.png?raw=true "Holds")
-`python main.py --route "This is a Low"` | ![Alt text](routes/thisisalow.png?raw=true "This is a Low")
+`python main.py --route "This is a Low"` | ![Alt text](.assets/img/routes/thisisalow.png?raw=true "This is a Low")
 
 ### Interactive mode
 
