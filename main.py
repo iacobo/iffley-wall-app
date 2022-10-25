@@ -34,3 +34,5 @@ if __name__ == "__main__":
 
     if args.cache:
         utils.cache_routes()
+
+    utils.create_topos_md()

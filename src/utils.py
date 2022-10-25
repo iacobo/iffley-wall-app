@@ -1,6 +1,7 @@
 from PIL import Image, ImageColor, ImageDraw, ImageEnhance, ImageFont
 from pathlib import Path
 from src.assets import HOLDS, ALL_ROUTES as ROUTES, COLOURS, BASE_IMG
+import pandas as pd
 import itertools
 
 
@@ -253,3 +254,48 @@ def list_routes_containing(hold):
 def list_stand_starts():
     route_list = [route for route in ROUTES if isinstance(ROUTES[route][0], tuple)]
     return route_list
+
+
+def create_topos_df():
+    route_names = list(ROUTES.keys())
+    img_locs = [
+        f"![{route}](routes/{clean_file_name(route)}.png?raw=true)"
+        for route in route_names
+    ]
+    df = pd.DataFrame(zip(route_names, img_locs), columns=["Name", "Topo"])
+    return df
+
+
+def create_topos_md():
+    df = create_topos_df()
+    md = df.to_markdown(index=False)
+    prefix = """<div align="center">
+
+<img src=".assets/img/icon.svg" width="100">
+
+## Digital Iffley Wall Guide
+
+
+</div>
+
+### Key
+
+- 🟨 <span style="color:yellow">Yellow</span>: standing start holds
+- 🟩 <span style="color:lime">Green</span>: general holds in the route
+- 🟥 <span style="color:red">Red</span>: final hold
+
+### Topos
+
+"""
+    suffix = """
+
+### Info
+
+- If there are no yellow holds then it is a sit start.
+- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
+- You do not need to match hands on the final hold.
+"""
+    md = prefix + md + suffix
+
+    with open("topos.md", "w", encoding="utf-8") as f:
+        f.write(md)
