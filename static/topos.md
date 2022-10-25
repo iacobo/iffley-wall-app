@@ -2,7 +2,7 @@
 
 <img src="../.assets/img/icon.svg" width="100">
 
-## Digital Iffley Wall Guide
+## All Routes
 
 
 </div>
@@ -13,13 +13,7 @@
 - 🟩 <span style="color:lime">Green</span>: general holds in the route
 - 🟥 <span style="color:red">Red</span>: final hold
 
-### Info
 
-- If there are no yellow holds then it is a sit start.
-- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
-- You do not need to match hands on the final hold.
-
-### Topos
 
 | Name                                         | Topo                                                                                                                  |
 |:---------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|

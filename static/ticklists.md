@@ -2,7 +2,7 @@
 
 <img src="../.assets/img/icon.svg" width="100">
 
-## Digital Iffley Wall Guide
+## Iffley Tick Lists
 
 
 </div>
@@ -13,14 +13,18 @@
 - 🟩 <span style="color:lime">Green</span>: general holds in the route
 - 🟥 <span style="color:red">Red</span>: final hold
 
-### Info
 
-- If there are no yellow holds then it is a sit start.
-- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
-- You do not need to match hands on the final hold.
 
-### Topos
 
+### Index
+
+- [1: First Steps](#1-first-steps)
+- [2: Easy Classics](#2-easy-classics)
+- [3: Into the Fives](#3-into-the-fives)
+- [4: Classic Iffley](#4-classic-iffley)
+- [5: The Threshold Problems](#5-the-threshold-problems)
+- [6: Hard Iffley](#6-hard-iffley)
+- [Girdering](#girdering)
 ### 1: First Steps
 
 | Name                  | Topo                                                                          |

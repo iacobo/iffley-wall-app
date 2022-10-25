@@ -5,30 +5,29 @@ from src.routes import iffley_tick_lists
 import pandas as pd
 import itertools
 
-MD_PREFIX = """<div align="center">
+
+def generate_header(title, key=True, info=False):
+    newline = "\n"
+    header = f"""<div align="center">
 
 <img src="../.assets/img/icon.svg" width="100">
 
-## Digital Iffley Wall Guide
+## {title}
 
 
 </div>
 
-### Key
+{'### Key' + newline + newline +
+'- 🟨 <span style="color:yellow">Yellow</span>: standing start holds' + newline +
+'- 🟩 <span style="color:lime">Green</span>: general holds in the route' + newline +
+'- 🟥 <span style="color:red">Red</span>: final hold' + newline if key else ""}
 
-- 🟨 <span style="color:yellow">Yellow</span>: standing start holds
-- 🟩 <span style="color:lime">Green</span>: general holds in the route
-- 🟥 <span style="color:red">Red</span>: final hold
-
-### Info
-
-- If there are no yellow holds then it is a sit start.
-- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).
-- You do not need to match hands on the final hold.
-
-### Topos
-
+{'### Info' + newline + newline +
+'- If there are no yellow holds then it is a sit start.' + newline +
+'- Sit starts consist of any hold you can reach while seated (usually with a foot on the first hold).' + newline +
+'- You do not need to match hands on the final hold.' + newline if info else ""}
 """
+    return header
 
 
 def clean_file_name(name):
@@ -295,14 +294,20 @@ def create_topos_df():
 def create_topos_md():
     df = create_topos_df()
     md = df.to_markdown(index=False)
-    md = MD_PREFIX + md
+    md = generate_header("All Routes") + md
 
     with open("static/topos.md", "w", encoding="utf-8") as f:
         f.write(md)
 
 
 def create_ticklists_md():
-    md = MD_PREFIX
+    md = generate_header("Iffley Tick Lists")
+    md += """
+### Index
+
+"""
+    for circuit in iffley_tick_lists.keys():
+        md += f"- [{circuit}](#{circuit.lower().replace(' ','-').replace(':','')})\n"
     for circuit, routes in iffley_tick_lists.items():
         img_locs = [
             f"![{route}](../.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
