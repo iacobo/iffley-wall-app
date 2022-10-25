@@ -12,9 +12,11 @@ A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for rout
 
 <div align="center">
 
-## 🪨 [All routes](static/topos.md)
+### 🪨 [All routes](static/topos.md)
 
-## 🪨 [Tick Lists](static/ticklists.md)
+### 🪨 [Tick Lists](static/ticklists.md)
+
+### 🪨 [Circuits]()
 
 </div>
 
@@ -24,16 +26,23 @@ Type in the name of a route or holds and run the appropriate cell to highlight t
 
 ### Running locally
 
-First create and activate a virtual environment:
+Alternatively you can run the software locally. First create and activate a virtual environment:
 
 ```shell
 conda env create -f environment.yml
 conda activate env-iffley
 ```
 
-Then use one of the following commands, specifying the route or holds to highlight:
+Then use one of the following commands, specifying the holds or route to highlight:
 
-⠀⠀⠀⠀⠀Command⠀⠀⠀⠀⠀| Output
-:--------:|:-------:
-`python main.py --holds 2 14 42 44 96` | ![Alt text](.assets/img/examples/holds.png?raw=true "Holds")
-`python main.py --route "This is a Low"` | ![Alt text](.assets/img/routes/thisisalow.png?raw=true "This is a Low")
+```shell
+>>> python main.py --holds 2 14 42 44 96
+```
+
+> ![Alt text](.assets/img/examples/holds.png?raw=true "Holds")
+
+```shell
+>>> python main.py --route "This is a Low"
+```
+
+> ![Alt text](.assets/img/routes/thisisalow.png?raw=true "This is a Low")
