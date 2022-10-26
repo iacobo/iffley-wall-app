@@ -1,10 +1,11 @@
 <div align="center">
-
+    
 [Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md)
 
 <img src="../.assets/img/icon.svg" width="100">
 
 ## Iffley Tick Lists
+
 
 </div>
 
@@ -13,6 +14,9 @@
 - 🟨 <span style="color:yellow">Yellow</span>: standing start holds
 - 🟩 <span style="color:lime">Green</span>: general holds in the route
 - 🟥 <span style="color:red">Red</span>: final hold
+
+
+
 
 ### Index
 
@@ -23,7 +27,6 @@
 - [5: The Threshold Problems](#5-the-threshold-problems)
 - [6: Hard Iffley](#6-hard-iffley)
 - [Girdering](#girdering)
-
 ### 1: First Steps
 
 | Name                  | Topo                                                                          |
@@ -34,7 +37,6 @@
 | The Right Stuff       | ![The Right Stuff](../.assets/img/routes/therightstuff.png?raw=true)          |
 | Dynosaur              | ![Dynosaur](../.assets/img/routes/dynosaur.png?raw=true)                      |
 | The Rocker            | ![The Rocker](../.assets/img/routes/therocker.png?raw=true)                   |
-
 ### 2: Easy Classics
 
 | Name            | Topo                                                                |
@@ -50,8 +52,9 @@
 | Pebble Beach    | ![Pebble Beach](../.assets/img/routes/pebblebeach.png?raw=true)     |
 | The Slide       | ![The Slide](../.assets/img/routes/theslide.png?raw=true)           |
 | Wax on, Wax off | ![Wax on, Wax off](../.assets/img/routes/waxonwaxoff.png?raw=true)  |
+| The Sting       | ![The Sting](../.assets/img/routes/thesting.png?raw=true)           |
+| Rock & Roll     | ![Rock & Roll](../.assets/img/routes/rockroll.png?raw=true)         |
 | Stroll          | ![Stroll](../.assets/img/routes/stroll.png?raw=true)                |
-
 ### 3: Into the Fives
 
 | Name             | Topo                                                                   |
@@ -62,13 +65,15 @@
 | Squetch          | ![Squetch](../.assets/img/routes/squetch.png?raw=true)                 |
 | Halloween        | ![Halloween](../.assets/img/routes/halloween.png?raw=true)             |
 | Cosmic           | ![Cosmic](../.assets/img/routes/cosmic.png?raw=true)                   |
+| Long Division    | ![Long Division](../.assets/img/routes/longdivision.png?raw=true)      |
 | Varsity          | ![Varsity](../.assets/img/routes/varsity.png?raw=true)                 |
 | Weak Like Monkey | ![Weak Like Monkey](../.assets/img/routes/weaklikemonkey.png?raw=true) |
+| Major League     | ![Major League](../.assets/img/routes/majorleague.png?raw=true)        |
 | Die Yetis!       | ![Die Yetis!](../.assets/img/routes/dieyetis.png?raw=true)             |
+| Befuddled        | ![Befuddled](../.assets/img/routes/befuddled.png?raw=true)             |
 | Irn Bru          | ![Irn Bru](../.assets/img/routes/irnbru.png?raw=true)                  |
 | Strong Like Bull | ![Strong Like Bull](../.assets/img/routes/stronglikebull.png?raw=true) |
 | Central Pillar   | ![Central Pillar](../.assets/img/routes/centralpillar.png?raw=true)    |
-
 ### 4: Classic Iffley
 
 | Name                                      | Topo                                                                                                                 |
@@ -104,46 +109,47 @@
 | PARC Analysis                             | ![PARC Analysis](../.assets/img/routes/parcanalysis.png?raw=true)                                                    |
 | High Tension                              | ![High Tension](../.assets/img/routes/hightension.png?raw=true)                                                      |
 | Ambiguity                                 | ![Ambiguity](../.assets/img/routes/ambiguity.png?raw=true)                                                           |
-
 ### 5: The Threshold Problems
-
-| Name                          | Topo                                                                                           |
-|:------------------------------|:-----------------------------------------------------------------------------------------------|
-| Analogue                      | ![Analogue](../.assets/img/routes/analogue.png?raw=true)                                       |
-| Digital                       | ![Digital](../.assets/img/routes/digital.png?raw=true)                                         |
-| This is a Low                 | ![This is a Low](../.assets/img/routes/thisisalow.png?raw=true)                                |
-| Twister Variation             | ![Twister Variation](../.assets/img/routes/twistervariation.png?raw=true)                      |
-| Resurrection                  | ![Resurrection](../.assets/img/routes/resurrection.png?raw=true)                               |
-| Hate Mail                     | ![Hate Mail](../.assets/img/routes/hatemail.png?raw=true)                                      |
-| The Tensor                    | ![The Tensor](../.assets/img/routes/thetensor.png?raw=true)                                    |
-| Deadpoint                     | ![Deadpoint](../.assets/img/routes/deadpoint.png?raw=true)                                     |
-| Dance of the Electric Penguin | ![Dance of the Electric Penguin](../.assets/img/routes/danceoftheelectricpenguin.png?raw=true) |
-
-### 6: Hard Iffley
 
 | Name                            | Topo                                                                                              |
 |:--------------------------------|:--------------------------------------------------------------------------------------------------|
+| Analogue                        | ![Analogue](../.assets/img/routes/analogue.png?raw=true)                                          |
+| Digital                         | ![Digital](../.assets/img/routes/digital.png?raw=true)                                            |
+| This is a Low                   | ![This is a Low](../.assets/img/routes/thisisalow.png?raw=true)                                   |
+| Twister Variation               | ![Twister Variation](../.assets/img/routes/twistervariation.png?raw=true)                         |
+| The Apes of Wrath               | ![The Apes of Wrath](../.assets/img/routes/theapesofwrath.png?raw=true)                           |
+| The Tactile Variation           | ![The Tactile Variation](../.assets/img/routes/thetactilevariation.png?raw=true)                  |
+| Resurrection                    | ![Resurrection](../.assets/img/routes/resurrection.png?raw=true)                                  |
+| Hate Mail                       | ![Hate Mail](../.assets/img/routes/hatemail.png?raw=true)                                         |
+| The Tensor                      | ![The Tensor](../.assets/img/routes/thetensor.png?raw=true)                                       |
+| Deadpoint                       | ![Deadpoint](../.assets/img/routes/deadpoint.png?raw=true)                                        |
+| Dance of the Electric Penguin   | ![Dance of the Electric Penguin](../.assets/img/routes/danceoftheelectricpenguin.png?raw=true)    |
 | The Tall Man Rides a Shovelhead | ![The Tall Man Rides a Shovelhead](../.assets/img/routes/thetallmanridesashovelhead.png?raw=true) |
-| Osmosis                         | ![Osmosis](../.assets/img/routes/osmosis.png?raw=true)                                            |
-| Moby Dick                       | ![Moby Dick](../.assets/img/routes/mobydick.png?raw=true)                                         |
-| The Blair Witch Project         | ![The Blair Witch Project](../.assets/img/routes/theblairwitchproject.png?raw=true)               |
-| The Four Minute Mile            | ![The Four Minute Mile](../.assets/img/routes/thefourminutemile.png?raw=true)                     |
-| The Fallen                      | ![The Fallen](../.assets/img/routes/thefallen.png?raw=true)                                       |
-| Zebedee's Torment               | ![Zebedee's Torment](../.assets/img/routes/zebedeestorment.png?raw=true)                          |
-| The Witching Hour               | ![The Witching Hour](../.assets/img/routes/thewitchinghour.png?raw=true)                          |
-| Horny Little Devil              | ![Horny Little Devil](../.assets/img/routes/hornylittledevil.png?raw=true)                        |
-| Potheosis                       | ![Potheosis](../.assets/img/routes/potheosis.png?raw=true)                                        |
-| Ice Lolly                       | ![Ice Lolly](../.assets/img/routes/icelolly.png?raw=true)                                         |
-| Palm Beach                      | ![Palm Beach](../.assets/img/routes/palmbeach.png?raw=true)                                       |
-| Bemused                         | ![Bemused](../.assets/img/routes/bemused.png?raw=true)                                            |
-| Ecstasy                         | ![Ecstasy](../.assets/img/routes/ecstasy.png?raw=true)                                            |
+### 6: Hard Iffley
 
+| Name                    | Topo                                                                                |
+|:------------------------|:------------------------------------------------------------------------------------|
+| Osmosis                 | ![Osmosis](../.assets/img/routes/osmosis.png?raw=true)                              |
+| Moby Dick               | ![Moby Dick](../.assets/img/routes/mobydick.png?raw=true)                           |
+| The Blair Witch Project | ![The Blair Witch Project](../.assets/img/routes/theblairwitchproject.png?raw=true) |
+| The Four Minute Mile    | ![The Four Minute Mile](../.assets/img/routes/thefourminutemile.png?raw=true)       |
+| The Fallen              | ![The Fallen](../.assets/img/routes/thefallen.png?raw=true)                         |
+| Zebedee's Torment       | ![Zebedee's Torment](../.assets/img/routes/zebedeestorment.png?raw=true)            |
+| The Witching Hour       | ![The Witching Hour](../.assets/img/routes/thewitchinghour.png?raw=true)            |
+| Horny Little Devil      | ![Horny Little Devil](../.assets/img/routes/hornylittledevil.png?raw=true)          |
+| Potheosis               | ![Potheosis](../.assets/img/routes/potheosis.png?raw=true)                          |
+| Ice Lolly               | ![Ice Lolly](../.assets/img/routes/icelolly.png?raw=true)                           |
+| Palm Beach              | ![Palm Beach](../.assets/img/routes/palmbeach.png?raw=true)                         |
+| Bemused                 | ![Bemused](../.assets/img/routes/bemused.png?raw=true)                              |
+| Ecstasy                 | ![Ecstasy](../.assets/img/routes/ecstasy.png?raw=true)                              |
+| Rainbow                 | ![Rainbow](../.assets/img/routes/rainbow.png?raw=true)                              |
 ### Girdering
 
-| Name           | Topo                                                               |
-|:---------------|:-------------------------------------------------------------------|
-| Rainbow        | ![Rainbow](../.assets/img/routes/rainbow.png?raw=true)             |
-| The Easy Touch | ![The Easy Touch](../.assets/img/routes/theeasytouch.png?raw=true) |
-| Dyno 8         | ![Dyno 8](../.assets/img/routes/dyno8.png?raw=true)                |
-| Apollo         | ![Apollo](../.assets/img/routes/apollo.png?raw=true)               |
-| Aviation       | ![Aviation](../.assets/img/routes/aviation.png?raw=true)           |
+| Name                        | Topo                                                                                     |
+|:----------------------------|:-----------------------------------------------------------------------------------------|
+| The Easy Touch              | ![The Easy Touch](../.assets/img/routes/theeasytouch.png?raw=true)                       |
+| Curdled Custard             | ![Curdled Custard](../.assets/img/routes/curdledcustard.png?raw=true)                    |
+| Swing like a Monkey, Part 2 | ![Swing like a Monkey, Part 2](../.assets/img/routes/swinglikeamonkeypart2.png?raw=true) |
+| Dyno 8                      | ![Dyno 8](../.assets/img/routes/dyno8.png?raw=true)                                      |
+| Apollo                      | ![Apollo](../.assets/img/routes/apollo.png?raw=true)                                     |
+| Aviation                    | ![Aviation](../.assets/img/routes/aviation.png?raw=true)                                 |

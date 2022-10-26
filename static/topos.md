@@ -344,8 +344,13 @@
 | The Magic Carpet Ride                        | ![The Magic Carpet Ride](../.assets/img/routes/themagiccarpetride.png?raw=true)                                          |
 | The Rocker                                   | ![The Rocker](../.assets/img/routes/therocker.png?raw=true)                                                              |
 | The Slide                                    | ![The Slide](../.assets/img/routes/theslide.png?raw=true)                                                                |
+| The Sting                                    | ![The Sting](../.assets/img/routes/thesting.png?raw=true)                                                                |
+| Rock & Roll                                  | ![Rock & Roll](../.assets/img/routes/rockroll.png?raw=true)                                                              |
 | Squetch                                      | ![Squetch](../.assets/img/routes/squetch.png?raw=true)                                                                   |
+| Long Division                                | ![Long Division](../.assets/img/routes/longdivision.png?raw=true)                                                        |
 | Weak Like Monkey                             | ![Weak Like Monkey](../.assets/img/routes/weaklikemonkey.png?raw=true)                                                   |
+| Major League                                 | ![Major League](../.assets/img/routes/majorleague.png?raw=true)                                                          |
+| Befuddled                                    | ![Befuddled](../.assets/img/routes/befuddled.png?raw=true)                                                               |
 | Irn Bru                                      | ![Irn Bru](../.assets/img/routes/irnbru.png?raw=true)                                                                    |
 | The Pint Glass                               | ![The Pint Glass](../.assets/img/routes/thepintglass.png?raw=true)                                                       |
 | Overmantel                                   | ![Overmantel](../.assets/img/routes/overmantel.png?raw=true)                                                             |
@@ -358,10 +363,13 @@
 | Chaos Theory                                 | ![Chaos Theory](../.assets/img/routes/chaostheory.png?raw=true)                                                          |
 | The Beards of Zeus                           | ![The Beards of Zeus](../.assets/img/routes/thebeardsofzeus.png?raw=true)                                                |
 | Ape Index                                    | ![Ape Index](../.assets/img/routes/apeindex.png?raw=true)                                                                |
+| The Apes of Wrath                            | ![The Apes of Wrath](../.assets/img/routes/theapesofwrath.png?raw=true)                                                  |
+| The Tactile Variation                        | ![The Tactile Variation](../.assets/img/routes/thetactilevariation.png?raw=true)                                         |
 | The Tall Man Rides a Shovelhead              | ![The Tall Man Rides a Shovelhead](../.assets/img/routes/thetallmanridesashovelhead.png?raw=true)                        |
 | Osmosis                                      | ![Osmosis](../.assets/img/routes/osmosis.png?raw=true)                                                                   |
 | Rainbow                                      | ![Rainbow](../.assets/img/routes/rainbow.png?raw=true)                                                                   |
 | The Easy Touch                               | ![The Easy Touch](../.assets/img/routes/theeasytouch.png?raw=true)                                                       |
+| Curdled Custard                              | ![Curdled Custard](../.assets/img/routes/curdledcustard.png?raw=true)                                                    |
 | Dyno 8                                       | ![Dyno 8](../.assets/img/routes/dyno8.png?raw=true)                                                                      |
 | Apollo                                       | ![Apollo](../.assets/img/routes/apollo.png?raw=true)                                                                     |
 | Aviation                                     | ![Aviation](../.assets/img/routes/aviation.png?raw=true)                                                                 |

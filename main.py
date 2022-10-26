@@ -36,5 +36,4 @@ if __name__ == "__main__":
         utils.cache_routes()
 
     # Generating guide pages
-    utils.create_topos_md()
-    utils.create_ticklists_md()
+    utils.create_webpages()

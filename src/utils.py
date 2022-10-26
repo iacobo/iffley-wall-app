@@ -1,7 +1,7 @@
 from PIL import Image, ImageColor, ImageDraw, ImageEnhance, ImageFont
 from pathlib import Path
 from src.assets import HOLDS, ALL_ROUTES as ROUTES, COLOURS, BASE_IMG
-from src.routes import iffley_tick_lists
+from src.routes import iffley_tick_lists, iffley_circuits
 import pandas as pd
 import itertools
 
@@ -10,7 +10,7 @@ def generate_header(title, key=True, info=False):
     newline = "\n"
     header = f"""<div align="center">
     
-[Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md)
+[Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md) | [Circuits](circuits.md)
 
 <img src="../.assets/img/icon.svg" width="100">
 
@@ -302,15 +302,15 @@ def create_topos_md():
         f.write(md)
 
 
-def create_ticklists_md():
-    md = generate_header("Iffley Tick Lists")
+def create_routelists_md(title, routelists, filename):
+    md = generate_header(title)
     md += """
 ### Index
 
 """
-    for circuit in iffley_tick_lists.keys():
+    for circuit in routelists.keys():
         md += f"- [{circuit}](#{circuit.lower().replace(' ','-').replace(':','')})\n"
-    for circuit, routes in iffley_tick_lists.items():
+    for circuit, routes in routelists.items():
         img_locs = [
             f"![{route}](../.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
             for route in routes
@@ -324,5 +324,11 @@ def create_ticklists_md():
 """
         )
 
-    with open("static/ticklists.md", "w", encoding="utf-8") as f:
+    with open(f"static/{filename}.md", "w", encoding="utf-8") as f:
         f.write(md)
+
+
+def create_webpages():
+    create_topos_md()
+    create_routelists_md("Iffley Tick Lists", iffley_tick_lists, "ticklists")
+    create_routelists_md("Iffley Circuits", iffley_circuits, "circuits")

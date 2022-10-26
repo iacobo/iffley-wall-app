@@ -16,7 +16,7 @@ A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for rout
 
 ### 🪨 [Tick Lists](static/ticklists.md)
 
-### 🪨 [Circuits]()
+### 🪨 [Circuits](static/circuits.md)
 
 </div>
 
