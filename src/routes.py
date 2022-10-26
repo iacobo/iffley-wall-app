@@ -123,8 +123,8 @@ iffley_tick_lists = {
     "2: Easy Classics": list(iffley_10_routes.keys())[6:20],
     "3: Into the Fives": list(iffley_10_routes.keys())[20:35],
     "4: Classic Iffley": list(iffley_10_routes.keys())[35:66],
-    "5: The Threshold Problems": list(iffley_10_routes.keys())[66:78],
-    "6: Hard Iffley": list(iffley_10_routes.keys())[78:92],
+    "5: The Threshold Problems": list(iffley_10_routes.keys())[66:77],
+    "6: Hard Iffley": list(iffley_10_routes.keys())[77:92],
     "Girdering": list(iffley_10_routes.keys())[92:],
 }
 

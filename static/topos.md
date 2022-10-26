@@ -1,6 +1,6 @@
 <div align="center">
     
-[Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md)
+[Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md) | [Circuits](circuits.md)
 
 <img src="../.assets/img/icon.svg" width="100">
 
