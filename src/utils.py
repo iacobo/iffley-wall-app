@@ -12,7 +12,7 @@ def generate_header(title, key=True, info=False):
     
 [Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md) | [Circuits](circuits.md)
 
-<img src="../.assets/img/icon.svg" width="100">
+<img src="https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/icon.svg" width="100">
 
 ## {title}
 
@@ -286,7 +286,7 @@ def list_stand_starts():
 def create_topos_df():
     route_names = list(ROUTES.keys())
     img_locs = [
-        f"![{route}](../.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
+        f"![{route}](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
         for route in route_names
     ]
     df = pd.DataFrame(zip(route_names, img_locs), columns=["Name", "Topo"])
@@ -312,13 +312,14 @@ def create_routelists_md(title, routelists, filename):
         md += f"- [{circuit}](#{circuit.lower().replace(' ','-').replace(':','')})\n"
     for circuit, routes in routelists.items():
         img_locs = [
-            f"![{route}](../.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
+            f"![{route}](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/{clean_file_name(route)}.png?raw=true)"
             for route in routes
         ]
         df = pd.DataFrame(zip(routes, img_locs), columns=["Name", "Topo"])
         md = (
             md
-            + f"""### {circuit}
+            + f"""
+### {circuit}
 
 {df.to_markdown(index=False)}
 """
