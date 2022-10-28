@@ -20,20 +20,18 @@ A digital guide to the Iffley Bouldering Wall in Oxford. Provides topos for rout
 
 </div>
 
-### Interactive mode
+---
 
-Type in the name of a route or holds and run the appropriate cell to highlight them [here](https://colab.research.google.com/github/iacobo/iffley-wall-app/blob/main/notebook.ipynb).
+## Custom routes
 
-### Running locally
-
-Alternatively you can run the software locally. First create and activate a virtual environment:
+You can run the script used to create this guide yourself and display your own custom routes. First create and activate a virtual environment:
 
 ```shell
 conda env create -f environment.yml
 conda activate env-iffley
 ```
 
-Then use one of the following commands, specifying the holds or route to highlight:
+Then use one of the following commands, specifying the holds (or route) to highlight:
 
 ```shell
 >>> python main.py --holds 2 14 42 44 96

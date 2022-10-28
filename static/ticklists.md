@@ -2,7 +2,7 @@
     
 [Home](../README.md) | [All routes](topos.md) | [Tick Lists](ticklists.md) | [Circuits](circuits.md)
 
-<img src="../.assets/img/icon.svg" width="100">
+<img src="../.assets/img/icon.svg?raw=true" width="100">
 
 ## Iffley Tick Lists
 
@@ -27,6 +27,7 @@
 - [5: The Threshold Problems](#5-the-threshold-problems)
 - [6: Hard Iffley](#6-hard-iffley)
 - [Girdering](#girdering)
+
 ### 1: First Steps
 
 | Name                  | Topo                                                                                                                           |
@@ -37,6 +38,7 @@
 | The Right Stuff       | ![The Right Stuff](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/therightstuff.png?raw=true)          |
 | Dynosaur              | ![Dynosaur](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/dynosaur.png?raw=true)                      |
 | The Rocker            | ![The Rocker](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/therocker.png?raw=true)                   |
+
 ### 2: Easy Classics
 
 | Name            | Topo                                                                                                                 |
@@ -55,6 +57,7 @@
 | The Sting       | ![The Sting](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/thesting.png?raw=true)           |
 | Rock & Roll     | ![Rock & Roll](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/rockroll.png?raw=true)         |
 | Stroll          | ![Stroll](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/stroll.png?raw=true)                |
+
 ### 3: Into the Fives
 
 | Name             | Topo                                                                                                                    |
@@ -74,6 +77,7 @@
 | Irn Bru          | ![Irn Bru](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/irnbru.png?raw=true)                  |
 | Strong Like Bull | ![Strong Like Bull](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/stronglikebull.png?raw=true) |
 | Central Pillar   | ![Central Pillar](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/centralpillar.png?raw=true)    |
+
 ### 4: Classic Iffley
 
 | Name                                      | Topo                                                                                                                                                                  |
@@ -109,6 +113,7 @@
 | PARC Analysis                             | ![PARC Analysis](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/parcanalysis.png?raw=true)                                                    |
 | High Tension                              | ![High Tension](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/hightension.png?raw=true)                                                      |
 | Ambiguity                                 | ![Ambiguity](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/ambiguity.png?raw=true)                                                           |
+
 ### 5: The Threshold Problems
 
 | Name                          | Topo                                                                                                                                            |
@@ -124,6 +129,7 @@
 | The Tensor                    | ![The Tensor](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/thetensor.png?raw=true)                                    |
 | Deadpoint                     | ![Deadpoint](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/deadpoint.png?raw=true)                                     |
 | Dance of the Electric Penguin | ![Dance of the Electric Penguin](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/danceoftheelectricpenguin.png?raw=true) |
+
 ### 6: Hard Iffley
 
 | Name                            | Topo                                                                                                                                               |
@@ -143,6 +149,7 @@
 | Bemused                         | ![Bemused](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/bemused.png?raw=true)                                            |
 | Ecstasy                         | ![Ecstasy](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/ecstasy.png?raw=true)                                            |
 | Rainbow                         | ![Rainbow](https://github.com/iacobo/iffley-wall-app/blob/main/.assets/img/routes/rainbow.png?raw=true)                                            |
+
 ### Girdering
 
 | Name                        | Topo                                                                                                                                      |
