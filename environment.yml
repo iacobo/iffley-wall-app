@@ -4,7 +4,7 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.9
+  - python=3.11
   - pip
 
   # Data
@@ -13,13 +13,3 @@ dependencies:
 
   # Image processing
   - pillow
-
-  # Jupyter Environment
-  - papermill
-  - autopep8
-  - jupyterlab
-  - notebook
-  - ipython
-  - jupyter_contrib_nbextensions
-  - nbclean
-  - nbresuse
