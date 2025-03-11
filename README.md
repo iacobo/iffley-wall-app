@@ -24,23 +24,16 @@ A digital guide to the [Iffley Bouldering Wall](https://users.ox.ac.uk/~climbing
 
 ## Custom routes
 
-You can run the script used to create this guide yourself and display your own custom routes. First create and activate a virtual environment:
+You can run the script used to create this guide yourself and display your own custom routes. Clone the repo locally, then use one of the following commands, specifying the holds (or route) to highlight:
 
 ```shell
-conda env create -f environment.yml
-conda activate env-iffley
-```
-
-Then use one of the following commands, specifying the holds (or route) to highlight:
-
-```shell
->>> python main.py --holds 2 14 42 44 96
+>>> uv run main.py --holds 2 14 42 44 96
 ```
 
 > ![Alt text](.assets/img/examples/holds.png?raw=true "Holds")
 
 ```shell
->>> python main.py --route "This is a Low"
+>>> uv run main.py --route "This is a Low"
 ```
 
 > ![Alt text](.assets/img/routes/thisisalow.png?raw=true "This is a Low")
